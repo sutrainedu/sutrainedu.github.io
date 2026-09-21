@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sut Raine Du | Personal Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #f8f8f6;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(248,248,246,0.95);
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav .logo {
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #222;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            opacity: 0.5;
+        }
+
+        section {
+            padding: 100px 8%;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: #f8f8f6;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero small {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #777;
+        }
+
+        .hero h1 {
+            font-size: clamp(55px, 10vw, 110px);
+            line-height: 0.95;
+            margin: 20px 0;
+            letter-spacing: -5px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            font-size: 20px;
+            color: #555;
+        }
+
+        .buttons {
+            margin-top: 35px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            margin-right: 10px;
+            border: 1px solid #222;
+            text-decoration: none;
+            color: #222;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #222;
+            color: white;
+        }
+
+        .section-title {
+            font-size: 42px;
+            margin-bottom: 35px;
+        }
+
+        .about {
+            background: white;
+        }
+
+        .about p {
+            max-width: 800px;
+            font-size: 19px;
+            color: #555;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border: 1px solid #ddd;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card span {
+            font-size: 13px;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .timeline {
+            border-left: 2px solid #222;
+            padding-left: 30px;
+            max-width: 800px;
+        }
+
+        .timeline-item {
+            margin-bottom: 35px;
+        }
+
+        .timeline-item h3 {
+            margin-bottom: 5px;
+        }
+
+        .timeline-item p {
+            color: #666;
+        }
+
+        .contact {
+            background: #222;
+            color: white;
+        }
+
+        .contact p {
+            color: #ccc;
+            max-width: 650px;
+        }
+
+        .contact a {
+            color: white;
+        }
+
+        footer {
+            background: #222;
+            color: #888;
+            text-align: center;
+            padding: 25px;
+            border-top: 1px solid #444;
+        }
+
+        @media (max-width: 700px) {
+
+            nav ul {
+                display: none;
+            }
+
+            section {
+                padding: 80px 6%;
+            }
+
+            .hero h1 {
+                font-size: 55px;
+                letter-spacing: -3px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">SUT RAINE DU</div>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <small>Personal Portfolio</small>
+
+            <h1>
+                Sut<br>
+                Raine Du
+            </h1>
+
+            <p>
+                Management • Education • Leadership • Research • Creative Work
+            </p>
+
+            <div class="buttons">
+                <a href="#about" class="btn">Explore My Work</a>
+                <a href="#contact" class="btn">Let's Connect</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <p>
+            I am a management and education professional with experience in
+            community leadership, organizational development, education,
+            research, and project coordination.
+        </p>
+
+        <br>
+
+        <p>
+            My interests focus on leadership, education development,
+            organizational management, and creating meaningful opportunities
+            for young people and communities.
+        </p>
+
+    </section>
+
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+
+        <h2 class="section-title">Experience</h2>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <h3>Program Facilitator — Ningshawng Social Institute</h3>
+                <span>2021 – 2024</span>
+                <p>
+                    Supported educational programs, student development,
+                    coordination, organizational activities, and community
+                    engagement.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Secretary — Kachin Student Association Bangkok</h3>
+                <span>Leadership & Community Engagement</span>
+                <p>
+                    Contributed to student leadership, event coordination,
+                    communication, community programs, and organizational
+                    activities.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Campus Chapter Director — MYEO</h3>
+                <span>2020 – 2023</span>
+                <p>
+                    Supported youth empowerment initiatives and campus-based
+                    activities in Myitkyina, Kachin State, Myanmar.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+    <section id="education" class="about">
+
+        <h2 class="section-title">Education</h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <span>Graduate Studies</span>
+                <h3>Global Master of Business Administration</h3>
+                <p>
+                    University of the Thai Chamber of Commerce (UTCC)
+                </p>
+            </div>
+
+            <div class="card">
+                <span>Bachelor's Degree</span>
+                <h3>BA in Philosophy</h3>
+                <p>
+                    University of East Yangon
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESEARCH -->
+    <section id="research">
+
+        <h2 class="section-title">Research</h2>
+
+        <div class="card">
+
+            <span>Independent Study</span>
+
+            <h3>
+                The Influence of Transformational Leadership
+                on Employee Motivation at the Ningshawng Social Institute
+            </h3>
+
+            <p>
+                My research explores the relationship between transformational
+                leadership and employee motivation within an educational
+                organization.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects" class="about">
+
+        <h2 class="section-title">Selected Projects</h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <span>Education</span>
+                <h3>Education & Community Development</h3>
+                <p>
+                    Projects and initiatives supporting education,
+                    youth development, and community engagement.
+                </p>
+            </div>
+
+            <div class="card">
+                <span>Leadership</span>
+                <h3>Student & Community Leadership</h3>
+                <p>
+                    Leadership and coordination across student and
+                    community-based organizations.
+                </p>
+            </div>
+
+            <div class="card">
+                <span>Research</span>
+                <h3>Leadership & Employee Motivation</h3>
+                <p>
+                    Academic research examining transformational leadership
+                    and employee motivation.
+                </p>
+            </div>
+
+            <div class="card">
+                <span>Creative</span>
+                <h3>Creative & Media Work</h3>
+                <p>
+                    Content, events, communication, and creative projects.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+
+        <h2 class="section-title">Let's Connect</h2>
+
+        <p>
+            Interested in collaboration, education, leadership,
+            research, or creative projects?
+        </p>
+
+        <br>
+
+        <p>
+            Email:
+            <a href="mailto:your-email@example.com">
+                your-email@example.com
+            </a>
+        </p>
+
+        <br>
+
+        <p>
+            LinkedIn:
+            <a href="#" target="_blank">
+                My LinkedIn Profile
+            </a>
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        © 2026 Sut Raine Du. All rights reserved.
+
+    </footer>
+
+</body>
+</html>
