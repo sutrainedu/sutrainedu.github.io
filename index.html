@@ -3,8 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Sut Raine Du | Personal Portfolio</title>
+
 <meta name="description" content="Sut Raine Du — Community Development Advocate, Global MBA Candidate, and youth leadership practitioner.">
+
 <style>
 :root{
   --ink:#1d2421;
@@ -16,130 +19,359 @@
   --accent2:#2f7052;
   --soft:#edf3ef;
 }
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   font-family:Arial,Helvetica,sans-serif;
   color:var(--ink);
   background:var(--paper);
   line-height:1.65;
 }
-a{color:inherit;text-decoration:none}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
 nav{
-  position:sticky;top:0;z-index:1000;
+  position:sticky;
+  top:0;
+  z-index:1000;
   background:rgba(255,255,255,.96);
   border-bottom:1px solid var(--line);
   backdrop-filter:blur(10px);
 }
+
 .nav-inner{
-  max-width:1180px;margin:auto;padding:18px 28px;
-  display:flex;justify-content:space-between;align-items:center;
+  max-width:1180px;
+  margin:auto;
+  padding:18px 28px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
-.logo{font-size:20px;font-weight:800;letter-spacing:4px}
-.nav-links{display:flex;gap:24px;font-size:14px;color:#4f5955}
-.nav-links a:hover{color:var(--accent)}
+
+.logo{
+  font-size:20px;
+  font-weight:800;
+  letter-spacing:4px;
+}
+
+.nav-links{
+  display:flex;
+  gap:24px;
+  font-size:14px;
+  color:#4f5955;
+}
+
+.nav-links a:hover{
+  color:var(--accent);
+}
+
 .hero{
-  max-width:1180px;margin:auto;min-height:88vh;
+  max-width:1180px;
+  margin:auto;
+  min-height:88vh;
   padding:90px 28px 70px;
-  display:grid;grid-template-columns:430px 1fr;
-  gap:80px;align-items:center;
+  display:grid;
+  grid-template-columns:430px 1fr;
+  gap:80px;
+  align-items:center;
 }
+
 .hero-photo{
-  width:100%;height:560px;object-fit:cover;
-  border-radius:8px;display:block;
+  width:100%;
+  height:560px;
+  object-fit:cover;
+  border-radius:8px;
+  display:block;
   box-shadow:0 25px 70px rgba(25,40,32,.14);
 }
+
 .eyebrow{
-  color:var(--accent2);font-size:14px;
-  letter-spacing:5px;text-transform:uppercase;
+  color:var(--accent2);
+  font-size:14px;
+  letter-spacing:5px;
+  text-transform:uppercase;
   margin-bottom:18px;
 }
+
 h1{
   font-size:clamp(56px,8vw,100px);
-  line-height:.95;letter-spacing:-4px;
+  line-height:.95;
+  letter-spacing:-4px;
   margin-bottom:28px;
 }
-.hero p{font-size:20px;color:#59625e;max-width:650px}
-.hero-buttons{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+
+.hero p{
+  font-size:20px;
+  color:#59625e;
+  max-width:650px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:14px;
+  margin-top:34px;
+  flex-wrap:wrap;
+}
+
 .btn{
-  display:inline-block;padding:13px 22px;border-radius:4px;
-  border:1px solid var(--accent);font-weight:700;font-size:14px;
+  display:inline-block;
+  padding:13px 22px;
+  border-radius:4px;
+  border:1px solid var(--accent);
+  font-weight:700;
+  font-size:14px;
 }
-.btn.primary{background:var(--accent);color:#fff}
-.btn:hover{transform:translateY(-1px)}
-section{padding:90px 28px}
-.section-inner{max-width:1080px;margin:auto}
+
+.btn.primary{
+  background:var(--accent);
+  color:#fff;
+}
+
+.btn:hover{
+  transform:translateY(-1px);
+}
+
+section{
+  padding:90px 28px;
+}
+
+.section-inner{
+  max-width:1080px;
+  margin:auto;
+}
+
 .section-label{
-  color:var(--accent2);font-size:13px;letter-spacing:4px;
-  text-transform:uppercase;margin-bottom:10px;font-weight:700;
-}
-h2{font-size:44px;line-height:1.1;margin-bottom:28px;letter-spacing:-1px}
-.lead{font-size:20px;max-width:850px;color:#4e5753}
-.about-grid{
-  display:grid;grid-template-columns:1.5fr 1fr;gap:55px;align-items:start;
-}
-.info-card{
-  background:var(--white);padding:28px;border:1px solid var(--line);
-  border-radius:8px;
-}
-.info-card strong{display:block;margin-bottom:8px}
-.timeline{display:grid;gap:24px}
-.item{
-  background:#fff;border:1px solid var(--line);border-radius:8px;
-  padding:28px;position:relative;
-}
-.item-top{
-  display:flex;justify-content:space-between;gap:20px;
-  align-items:flex-start;margin-bottom:8px;
-}
-.item h3{font-size:23px}
-.date{font-size:13px;color:var(--accent2);font-weight:700;white-space:nowrap}
-.org{color:#53605a;font-weight:700;margin-bottom:10px}
-.item ul{padding-left:20px;color:#4f5955}
-.edu-grid,.project-grid,.cert-grid{
-  display:grid;grid-template-columns:repeat(2,1fr);gap:20px;
-}
-.card{
-  background:#fff;border:1px solid var(--line);padding:26px;border-radius:8px;
-}
-.card h3{font-size:20px;margin-bottom:7px}
-.card .meta{color:var(--accent2);font-size:14px;font-weight:700}
-.card p{color:#59625e;margin-top:8px}
-.skills{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
-}
-.skill{
-  background:var(--soft);padding:18px;border-radius:6px;
+  color:var(--accent2);
+  font-size:13px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  margin-bottom:10px;
   font-weight:700;
 }
+
+h2{
+  font-size:44px;
+  line-height:1.1;
+  margin-bottom:28px;
+  letter-spacing:-1px;
+}
+
+.lead{
+  font-size:20px;
+  max-width:850px;
+  color:#4e5753;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr;
+  gap:55px;
+  align-items:start;
+}
+
+.info-card{
+  background:var(--white);
+  padding:28px;
+  border:1px solid var(--line);
+  border-radius:8px;
+}
+
+.info-card strong{
+  display:block;
+  margin-bottom:8px;
+}
+
+.timeline{
+  display:grid;
+  gap:24px;
+}
+
+.item{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:28px;
+  position:relative;
+}
+
+.item-top{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:flex-start;
+  margin-bottom:8px;
+}
+
+.item h3{
+  font-size:23px;
+}
+
+.date{
+  font-size:13px;
+  color:var(--accent2);
+  font-weight:700;
+  white-space:nowrap;
+}
+
+.org{
+  color:#53605a;
+  font-weight:700;
+  margin-bottom:10px;
+}
+
+.item ul{
+  padding-left:20px;
+  color:#4f5955;
+}
+
+.edu-grid,
+.project-grid,
+.cert-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+
+.card{
+  background:#fff;
+  border:1px solid var(--line);
+  padding:26px;
+  border-radius:8px;
+}
+
+.card h3{
+  font-size:20px;
+  margin-bottom:7px;
+}
+
+.card .meta{
+  color:var(--accent2);
+  font-size:14px;
+  font-weight:700;
+}
+
+.card p{
+  color:#59625e;
+  margin-top:8px;
+}
+
+.skills{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+
+.skill{
+  background:var(--soft);
+  padding:18px;
+  border-radius:6px;
+  font-weight:700;
+}
+
 .contact{
-  background:var(--accent);color:#fff;
+  background:var(--accent);
+  color:#fff;
 }
-.contact .section-label{color:#b9d9c6}
-.contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:50px}
-.contact p{color:#d9e6df}
-.contact-links{display:grid;gap:14px}
+
+.contact .section-label{
+  color:#b9d9c6;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:50px;
+}
+
+.contact p{
+  color:#d9e6df;
+}
+
+.contact-links{
+  display:grid;
+  gap:14px;
+}
+
 .contact-links a{
-  background:rgba(255,255,255,.08);padding:16px 18px;border-radius:5px;
+  background:rgba(255,255,255,.08);
+  padding:16px 18px;
+  border-radius:5px;
 }
-footer{text-align:center;padding:25px;background:#17382b;color:#d6e2dc;font-size:13px}
+
+footer{
+  text-align:center;
+  padding:25px;
+  background:#17382b;
+  color:#d6e2dc;
+  font-size:13px;
+}
+
 @media(max-width:850px){
-  .nav-inner{padding:16px 20px}
-  .nav-links{display:none}
-  .hero{grid-template-columns:1fr;gap:42px;padding-top:55px}
-  .hero-photo{height:520px;max-width:480px;margin:auto}
-  h1{font-size:64px}
-  .about-grid,.contact-grid{grid-template-columns:1fr}
-  .edu-grid,.project-grid,.cert-grid,.skills{grid-template-columns:1fr}
-  section{padding:70px 20px}
+
+  .nav-inner{
+    padding:16px 20px;
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+  .hero{
+    grid-template-columns:1fr;
+    gap:42px;
+    padding-top:55px;
+  }
+
+  .hero-photo{
+    height:520px;
+    max-width:480px;
+    margin:auto;
+  }
+
+  h1{
+    font-size:64px;
+  }
+
+  .about-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .edu-grid,
+  .project-grid,
+  .cert-grid,
+  .skills{
+    grid-template-columns:1fr;
+  }
+
+  section{
+    padding:70px 20px;
+  }
 }
 </style>
 </head>
+
 <body>
 
 <nav>
   <div class="nav-inner">
-    <a class="logo" href="#home">SUT RAINE DU</a>
+
+    <a class="logo" href="#home">
+      SUT RAINE DU
+    </a>
+
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
@@ -147,261 +379,868 @@ footer{text-align:center;padding:25px;background:#17382b;color:#d6e2dc;font-size
       <a href="#work">Work</a>
       <a href="#contact">Contact</a>
     </div>
+
   </div>
 </nav>
 
+
 <header class="hero" id="home">
-  <img src="Profile.PNG" alt="Sut Raine Du" class="hero-photo">
+
+  <img
+    src="Profile.PNG"
+    alt="Sut Raine Du"
+    class="hero-photo"
+  >
+
   <div>
-    <div class="eyebrow">Personal Portfolio</div>
-    <h1>Sut<br>Raine Du</h1>
-    <p>Community Development Advocate · Global MBA Candidate · Youth Leadership & Education Practitioner</p>
-    <div class="hero-buttons">
-      <a class="btn primary" href="#about">Explore My Work</a>
-      <a class="btn" href="#contact">Let's Connect</a>
+
+    <div class="eyebrow">
+      Personal Portfolio
     </div>
+
+    <h1>
+      Sut<br>
+      Raine Du
+    </h1>
+
+    <p>
+      Community Development Advocate · Global MBA Candidate ·
+      Youth Leadership & Education Practitioner
+    </p>
+
+    <div class="hero-buttons">
+
+      <a class="btn primary" href="#about">
+        Explore My Work
+      </a>
+
+      <a class="btn" href="#contact">
+        Let's Connect
+      </a>
+
+    </div>
+
   </div>
+
 </header>
 
+
 <section id="about">
+
   <div class="section-inner">
-    <div class="section-label">About Me</div>
-    <h2>Purpose-driven work, grounded in community.</h2>
+
+    <div class="section-label">
+      About Me
+    </div>
+
+    <h2>
+      Purpose-driven work, grounded in community.
+    </h2>
+
     <div class="about-grid">
+
       <p class="lead">
-        A purpose-driven leader with experience in youth empowerment, community education,
-        and grassroots coordination across Myanmar and Thailand. Sut Raine Du is currently
-        pursuing a Global MBA at UTCC, with interests in environmental stewardship,
-        participatory research, sustainable community development, and leadership.
+
+        A purpose-driven leader with experience in youth empowerment,
+        community education, and grassroots coordination across Myanmar
+        and Thailand. Sut Raine Du is currently pursuing a Global MBA
+        at UTCC, with interests in environmental stewardship,
+        participatory research, sustainable community development,
+        and leadership.
+
       </p>
+
       <div class="info-card">
-        <strong>Focus Areas</strong>
+
+        <strong>
+          Focus Areas
+        </strong>
+
         <p>Youth Empowerment</p>
         <p>Community Education</p>
         <p>Leadership Development</p>
         <p>Program Coordination</p>
         <p>Research & Community Development</p>
+
       </div>
+
     </div>
+
   </div>
+
 </section>
+
 
 <section id="experience">
+
   <div class="section-inner">
-    <div class="section-label">Professional Experience</div>
-    <h2>Experience</h2>
+
+    <div class="section-label">
+      Professional Experience
+    </div>
+
+    <h2>
+      Experience
+    </h2>
+
     <div class="timeline">
 
+
       <article class="item">
+
         <div class="item-top">
+
           <div>
-            <h3>Secretary</h3>
-            <div class="org">Kachin Student Association Bangkok (KSAB) · Bangkok, Thailand</div>
+
+            <h3>
+              Secretary
+            </h3>
+
+            <div class="org">
+              Kachin Student Association Bangkok (KSAB)
+              · Bangkok, Thailand
+            </div>
+
           </div>
-          <div class="date">Apr 2025 – May 2026</div>
+
+          <div class="date">
+            Apr 2025 – May 2026
+          </div>
+
         </div>
+
         <ul>
-          <li>Served as Secretary, supporting association administration, communications, documentation, and student/community activities.</li>
-          <li>Maintained official documentation and coordinated internal communications among members.</li>
-          <li>Recognised by Kachin Artists USA for service to the Kachin community.</li>
+
+          <li>
+            Served as Secretary, supporting association administration,
+            communications, documentation, and student/community activities.
+          </li>
+
+          <li>
+            Maintained official documentation and coordinated internal
+            communications among members.
+          </li>
+
+          <li>
+            Recognised by Kachin Artists USA for service to the
+            Kachin community.
+          </li>
+
         </ul>
+
       </article>
 
 
       <article class="item">
+
         <div class="item-top">
+
           <div>
-            <h3>Project Staff</h3>
-            <div class="org">PwC Thailand · Bangkok, Thailand</div>
+
+            <h3>
+              Project Staff
+            </h3>
+
+            <div class="org">
+              PwC Thailand · Bangkok, Thailand
+            </div>
+
           </div>
-          <div class="date">Nov 2025 – Aug 2026</div>
+
+          <div class="date">
+            Nov 2025 – Aug 2026
+          </div>
+
         </div>
+
         <ul>
-          <li>Participated in SAP SuccessFactors Implementation Projects.</li>
-          <li>Supported workshops, meetings, client discussions, project coordination, and communication between project stakeholders.</li>
-          <li>Assisted with tracking project activities, deadlines, and weekly meeting reporting.</li>
+
+          <li>
+            Participated in SAP SuccessFactors Implementation Projects.
+          </li>
+
+          <li>
+            Supported workshops, meetings, client discussions,
+            project coordination, and communication between
+            project stakeholders.
+          </li>
+
+          <li>
+            Assisted with tracking project activities, deadlines,
+            and weekly meeting reporting.
+          </li>
+
         </ul>
+
       </article>
 
-      <article class="item">
-        <div class="item-top">
-          <div>
-            <h3>Program Facilitator</h3>
-            <div class="org">Ningshawng Social Institute (NSI BME) · Myitkyina, Kachin State</div>
-          </div>
-          <div class="date">Jan 2021 – Dec 2024</div>
-        </div>
-        <ul>
-          <li>Led youth training programs in leadership, business management, and community-based education.</li>
-          <li>Organised capacity-building workshops and coordinated multi-stakeholder engagement.</li>
-          <li>Received the NSI BME Leadership Award in 2020 and a Certificate of Excellence for Exemplary Leadership.</li>
-        </ul>
-      </article>
 
       <article class="item">
+
         <div class="item-top">
+
           <div>
-            <h3>Campus Chapter Director</h3>
-            <div class="org">Myanmar Youth Empowerment Opportunities (MYEO) · Myanmar</div>
+
+            <h3>
+              Program Facilitator
+            </h3>
+
+            <div class="org">
+              Ningshawng Social Institute (NSI BME)
+              · Myitkyina, Kachin State
+            </div>
+
           </div>
-          <div class="date">2020 – 2023</div>
+
+          <div class="date">
+            Jan 2021 – Dec 2024
+          </div>
+
         </div>
+
         <ul>
-          <li>Contributed to the United Community Leadership Program (UCLP).</li>
-          <li>Supported youth leadership development and strategic planning.</li>
-          <li>Organised educational outreach, leadership workshops, and community engagement.</li>
-                  <li>Won the MYEO Unity Summit project competition as Group 9 in 2020 with the “Physical Disability to Ability” project.</li>
-</ul>
+
+          <li>
+            Led youth training programs in leadership,
+            business management, and community-based education.
+          </li>
+
+          <li>
+            Organised capacity-building workshops and coordinated
+            multi-stakeholder engagement.
+          </li>
+
+          <li>
+            Received the NSI BME Leadership Award in 2020 and
+            a Certificate of Excellence for Exemplary Leadership.
+          </li>
+
+        </ul>
+
+      </article>
+
+
+      <article class="item">
+
+        <div class="item-top">
+
+          <div>
+
+            <h3>
+              Campus Chapter Director
+            </h3>
+
+            <div class="org">
+              Myanmar Youth Empowerment Opportunities (MYEO)
+              · Myanmar
+            </div>
+
+          </div>
+
+          <div class="date">
+            2020 – 2023
+          </div>
+
+        </div>
+
+        <ul>
+
+          <li>
+            Contributed to the United Community Leadership Program (UCLP).
+          </li>
+
+          <li>
+            Supported youth leadership development and strategic planning.
+          </li>
+
+          <li>
+            Organised educational outreach, leadership workshops,
+            and community engagement.
+          </li>
+
+          <li>
+            Won the MYEO Unity Summit project competition as
+            Group 9 in 2020 with the “Physical Disability to Ability”
+            project.
+          </li>
+
+        </ul>
+
       </article>
 
     </div>
+
   </div>
+
 </section>
+
 
 <section id="education">
+
   <div class="section-inner">
-    <div class="section-label">Academic Background</div>
-    <h2>Education</h2>
-    <div class="edu-grid">
-      <div class="card">
-        <h3>Global Master of Business Administration (GMBA)</h3>
-        <div class="meta">University of the Thai Chamber of Commerce (UTCC) · Class of 2026</div>
-        <p>Bangkok, Thailand</p>
-      </div>
-      <div class="card">
-        <h3>Bachelor of Arts (B.A.) in Philosophy</h3>
-        <div class="meta">University of Yangon (East) · Class of 2023</div>
-        <p>Myanmar</p>
-      </div>
-      <div class="card">
-        <h3>Bachelor of Business Administration (BBA)</h3>
-        <div class="meta">Strategy First International College (Myanmar) · Class of 2024</div>
-        <p>Myanmar</p>
-      </div>
-      <div class="card">
-        <h3>Diploma in Business Management &amp; Administration (BMA)</h3>
-        <div class="meta">The Institute of Commercial Management (ICM) · Class of 2023</div>
-        <p>Business Management &amp; Administration</p>
-      </div>
-      <div class="card">
-        <h3>Diploma in Business Management &amp; English</h3>
-        <div class="meta">Ningshawng Social Institute · Class of 2020</div>
-        <p>Myitkyina, Kachin State, Myanmar</p>
-      </div>
+
+    <div class="section-label">
+      Academic Background
     </div>
+
+    <h2>
+      Education
+    </h2>
+
+    <div class="edu-grid">
+
+
+      <div class="card">
+
+        <h3>
+          Global Master of Business Administration (GMBA)
+        </h3>
+
+        <div class="meta">
+          University of the Thai Chamber of Commerce (UTCC)
+          · Class of 2026
+        </div>
+
+        <p>
+          Bangkok, Thailand
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Bachelor of Arts (B.A.) in Philosophy
+        </h3>
+
+        <div class="meta">
+          University of Yangon (East) · Class of 2023
+        </div>
+
+        <p>
+          Myanmar
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Bachelor of Business Administration (BBA)
+        </h3>
+
+        <div class="meta">
+          Strategy First International College (Myanmar)
+          · Class of 2024
+        </div>
+
+        <p>
+          Myanmar
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Diploma in Business Management &amp; Administration (BMA)
+        </h3>
+
+        <div class="meta">
+          The Institute of Commercial Management (ICM)
+          · Class of 2023
+        </div>
+
+        <p>
+          Business Management &amp; Administration
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Diploma in Business Management &amp; English
+        </h3>
+
+        <div class="meta">
+          Ningshawng Social Institute · Class of 2020
+        </div>
+
+        <p>
+          Myitkyina, Kachin State, Myanmar
+        </p>
+
+      </div>
+
+
+    </div>
+
   </div>
+
 </section>
+
 
 <section id="work">
+
   <div class="section-inner">
-    <div class="section-label">Selected Work</div>
-    <h2>Events & Contributions</h2>
+
+    <div class="section-label">
+      Selected Work
+    </div>
+
+    <h2>
+      Events & Contributions
+    </h2>
+
     <div class="project-grid">
+
+
       <div class="card">
-        <h3>Thailand Kachin Student Conference 2026</h3>
-        <div class="meta">Facilitator · Bangkok · Apr 12–14, 2026</div>
-        <p>KUSA & KSAB</p>
+
+        <h3>
+          Thailand Kachin Student Conference 2026
+        </h3>
+
+        <div class="meta">
+          Facilitator · Bangkok · Apr 12–14, 2026
+        </div>
+
+        <p>
+          KUSA & KSAB
+        </p>
+
       </div>
+
+
       <div class="card">
-        <h3>KSAB Academic Seminar Retreat</h3>
-        <div class="meta">Moderator · Jan 24–25, 2026</div>
-        <p>“The Journey Forward” · PINE Resort, Bangkok</p>
+
+        <h3>
+          KSAB Academic Seminar Retreat
+        </h3>
+
+        <div class="meta">
+          Moderator · Jan 24–25, 2026
+        </div>
+
+        <p>
+          “The Journey Forward” · PINE Resort, Bangkok
+        </p>
+
       </div>
+
+
       <div class="card">
-        <h3>KSAB Edu-Fair & Summit 2025</h3>
-        <div class="meta">Coordinator · Bangkok</div>
-        <p>Multi-track event series including education and community-focused activities.</p>
+
+        <h3>
+          KSAB Edu-Fair & Summit 2025
+        </h3>
+
+        <div class="meta">
+          Coordinator · Bangkok
+        </div>
+
+        <p>
+          Multi-track event series including education
+          and community-focused activities.
+        </p>
+
       </div>
+
+
       <div class="card">
-        <h3>MYEO Professional Soft Skills Training</h3>
-        <div class="meta">Training & Facilitation</div>
-        <p>Youth employability and leadership workshops in Myanmar.</p>
+
+        <h3>
+          MYEO Professional Soft Skills Training
+        </h3>
+
+        <div class="meta">
+          Training & Facilitation
+        </div>
+
+        <p>
+          Youth employability and leadership workshops in Myanmar.
+        </p>
+
       </div>
+
+
       <div class="card">
-        <h3>Ecovillage Transition Movement</h3>
-        <div class="meta">Batch 1 Participant · FREELAND Foundation · 2022</div>
-        <p>Community and regenerative development learning experience in Bago, Myanmar.</p>
+
+        <h3>
+          Ecovillage Transition Movement
+        </h3>
+
+        <div class="meta">
+          Batch 1 Participant · FREELAND Foundation · 2022
+        </div>
+
+        <p>
+          Community and regenerative development learning
+          experience in Bago, Myanmar.
+        </p>
+
       </div>
+
+
       <div class="card">
-        <h3>Community-Based Education</h3>
-        <div class="meta">NSI BME</div>
-        <p>Youth leadership, business management, training, and capacity-building initiatives.</p>
+
+        <h3>
+          Community-Based Education
+        </h3>
+
+        <div class="meta">
+          NSI BME
+        </div>
+
+        <p>
+          Youth leadership, business management, training,
+          and capacity-building initiatives.
+        </p>
+
       </div>
+
+
     </div>
+
   </div>
+
 </section>
 
+
 <section>
+
   <div class="section-inner">
-    <div class="section-label">Capabilities</div>
-    <h2>Skills & Languages</h2>
+
+    <div class="section-label">
+      Capabilities
+    </div>
+
+    <h2>
+      Skills & Languages
+    </h2>
+
     <div class="skills">
-      <div class="skill">Program Coordination</div>
-      <div class="skill">Community Work</div>
-      <div class="skill">Workshop Design</div>
-      <div class="skill">Field Research</div>
-      <div class="skill">Public Speaking</div>
-      <div class="skill">Event Management</div>
-      <div class="skill">Strategic Planning</div>
-      <div class="skill">Documentation</div>
-      <div class="skill">Social Media</div>
-      <div class="skill">Mentorship</div>
-      <div class="skill">VRIO Analysis</div>
-      <div class="skill">NGO Governance</div>
-    </div>
-    <div class="card" style="margin-top:24px">
-      <strong>Languages</strong>
-      <p>Kachin — Native · English — Fluent · Myanmar — Fluent · Thai — Basic</p>
-    </div>
-  </div>
-</section>
 
-<section>
-  <div class="section-inner">
-    <div class="section-label">Recognition</div>
-    <h2>Certifications & Awards</h2>
-    <div class="cert-grid">
-      <div class="card">
-        <h3>United Community Leadership Program — Winner, Group 9</h3>
-        <p>MYEO · 2020 · Yangon, Myanmar</p>
-        <p>Won the MYEO Unity Summit project competition with the project <em>“Physical Disability to Ability”</em>, presented in Yangon with the Canada Embassy.</p>
+      <div class="skill">
+        Program Coordination
       </div>
 
-      <div class="card"><h3>NSI BME Leadership Award — 2020</h3><p>Ningshawng Social Institute (NSI BME)</p></div>
-      <div class="card"><h3>Diploma in Business Management &amp; Administration (BMA)</h3><p>The Institute of Commercial Management (ICM) · 2023</p></div>
-      <div class="card"><h3>Certification of Appreciation</h3><p>Secretary, KSAB · Kachin Artists USA · 2025</p></div>
-      <div class="card"><h3>5-Days Content Creation Training</h3><p>Facebook / YouTube / TikTok · 2026</p></div>
-      <div class="card"><h3>Ecovillage Transition Movement</h3><p>Batch 1 Participant · FREELAND Foundation · 2022</p></div>
-      <div class="card"><h3>United Community Leadership Program</h3><p>MYEO · 2020</p></div>
-      <div class="card"><h3>Certificate of Excellence — Exemplary Leadership</h3><p>Ningshawng Social Institute · 2020</p></div>
-      <div class="card"><h3>Christian Business Principles</h3><p>Bakke Graduate University / Kachin Education Foundation · 2019</p></div>
-      <div class="card"><h3>Reconciliation Exchange Program</h3><p>The Wings Institute · 2019</p></div>
+      <div class="skill">
+        Community Work
+      </div>
+
+      <div class="skill">
+        Workshop Design
+      </div>
+
+      <div class="skill">
+        Field Research
+      </div>
+
+      <div class="skill">
+        Public Speaking
+      </div>
+
+      <div class="skill">
+        Event Management
+      </div>
+
+      <div class="skill">
+        Strategic Planning
+      </div>
+
+      <div class="skill">
+        Documentation
+      </div>
+
+      <div class="skill">
+        Social Media
+      </div>
+
+      <div class="skill">
+        Mentorship
+      </div>
+
+      <div class="skill">
+        VRIO Analysis
+      </div>
+
+      <div class="skill">
+        NGO Governance
+      </div>
+
     </div>
+
+
+    <div class="card" style="margin-top:24px">
+
+      <strong>
+        Languages
+      </strong>
+
+      <p>
+        Kachin — Native · English — Fluent ·
+        Myanmar — Fluent · Thai — Basic
+      </p>
+
+    </div>
+
   </div>
+
 </section>
+
+
+<section>
+
+  <div class="section-inner">
+
+    <div class="section-label">
+      Recognition
+    </div>
+
+    <h2>
+      Certifications & Awards
+    </h2>
+
+    <div class="cert-grid">
+
+
+      <div class="card">
+
+        <h3>
+          United Community Leadership Program — Winner, Group 9
+        </h3>
+
+        <p>
+          MYEO · 2020 · Yangon, Myanmar
+        </p>
+
+        <p>
+          Won the MYEO Unity Summit project competition
+          with the project <em>“Physical Disability to Ability”</em>,
+          presented in Yangon with the Canada Embassy.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          NSI BME Leadership Award — 2020
+        </h3>
+
+        <p>
+          Ningshawng Social Institute (NSI BME)
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Diploma in Business Management &amp; Administration (BMA)
+        </h3>
+
+        <p>
+          The Institute of Commercial Management (ICM) · 2023
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Certification of Appreciation
+        </h3>
+
+        <p>
+          Secretary, KSAB · Kachin Artists USA · 2025
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          5-Days Content Creation Training
+        </h3>
+
+        <p>
+          Facebook / YouTube / TikTok · 2026
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Ecovillage Transition Movement
+        </h3>
+
+        <p>
+          Batch 1 Participant · FREELAND Foundation · 2022
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          United Community Leadership Program
+        </h3>
+
+        <p>
+          MYEO · 2020
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Certificate of Excellence — Exemplary Leadership
+        </h3>
+
+        <p>
+          Ningshawng Social Institute · 2020
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Christian Business Principles
+        </h3>
+
+        <p>
+          Bakke Graduate University /
+          Kachin Education Foundation · 2019
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Reconciliation Exchange Program
+        </h3>
+
+        <p>
+          The Wings Institute · 2019
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
 
 <section class="contact" id="contact">
+
   <div class="section-inner">
-    <div class="section-label">Contact</div>
-    <div class="contact-grid">
-      <div>
-        <h2>Let's connect.</h2>
-        <p>For collaboration, community initiatives, research, education, or professional opportunities.</p>
-      </div>
-      <div class="contact-links">
-        <a href="tel:+66816299530">☎ Thailand: 081 629 9530</a>
-        <a href="tel:+959797063708">☎ Myanmar: 09 7970 63708</a>
-        <a href="mailto:sutrainedu98@gmail.com">✉ sutrainedu98@gmail.com</a>
-        <a href="https://www.facebook.com/share/1GCNnomD2g/?mibextid=wwXIfr" target="_blank" rel="noopener">f Facebook · Sut Raine Du</a>
-        <a href="https://www.linkedin.com/in/sut-rainedu" target="_blank" rel="noopener">in LinkedIn · sut-rainedu</a>
-        <a href="https://github.com/sutrainedu" target="_blank" rel="noopener">⌘ GitHub · sutrainedu</a>
-        <a href="https://line.me/ti/p/~sutrainedu" target="_blank" rel="noopener">LINE · sutrainedu</a>
-        <a href="#home">↑ Back to top</a>
-      </div>
+
+    <div class="section-label">
+      Contact
     </div>
+
+    <div class="contact-grid">
+
+      <div>
+
+        <h2>
+          Let's connect.
+        </h2>
+
+        <p>
+          For collaboration, community initiatives, research,
+          education, or professional opportunities.
+        </p>
+
+      </div>
+
+
+      <div class="contact-links">
+
+        <a href="tel:+66816299530">
+          ☎ Thailand: 081 629 9530
+        </a>
+
+        <a href="tel:+959797063708">
+          ☎ Myanmar: 09 7970 63708
+        </a>
+
+        <a href="mailto:sutrainedu98@gmail.com">
+          ✉ sutrainedu98@gmail.com
+        </a>
+
+        <a
+          href="https://www.facebook.com/share/1GCNnomD2g/?mibextid=wwXIfr"
+          target="_blank"
+          rel="noopener"
+        >
+          f Facebook · Sut Raine Du
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/sut-raine-du-58a722182/"
+          target="_blank"
+          rel="noopener"
+        >
+          in LinkedIn · sut-raine-du-58a722182
+        </a>
+
+        <a
+          href="https://github.com/sutrainedu"
+          target="_blank"
+          rel="noopener"
+        >
+          ⌘ GitHub · sutrainedu
+        </a>
+
+        <a
+          href="https://line.me/ti/p/~sutrainedu"
+          target="_blank"
+          rel="noopener"
+        >
+          LINE · sutrainedu
+        </a>
+
+        <a href="#home">
+          ↑ Back to top
+        </a>
+
+      </div>
+
+    </div>
+
   </div>
+
 </section>
 
-<footer>© 2026 Sut Raine Du. All rights reserved.</footer>
+
+<footer>
+  © 2026 Sut Raine Du. All rights reserved.
+</footer>
+
+
 </body>
 </html>
