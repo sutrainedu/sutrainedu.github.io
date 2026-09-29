@@ -9,7 +9,7 @@
 <style>
 
 /* =====================================================
-   VARIABLES
+   ROOT & GLOBAL
 ===================================================== */
 
 :root{
@@ -22,11 +22,6 @@
   --muted:#647080;
   --line:#dce3ec;
 }
-
-
-/* =====================================================
-   RESET
-===================================================== */
 
 *{
   margin:0;
@@ -45,15 +40,17 @@ body{
     sans-serif;
 
   color:var(--text);
-
   background:var(--very-light);
-
   line-height:1.6;
 }
 
 a{
   text-decoration:none;
   color:inherit;
+}
+
+img{
+  max-width:100%;
 }
 
 
@@ -66,8 +63,7 @@ nav{
   top:0;
   z-index:1000;
 
-  background:
-    rgba(255,255,255,.97);
+  background:rgba(255,255,255,.97);
 
   border-bottom:
     1px solid var(--line);
@@ -75,17 +71,12 @@ nav{
 
 .nav{
   max-width:1180px;
-
   margin:auto;
 
-  padding:
-    17px 25px;
+  padding:17px 25px;
 
   display:flex;
-
-  justify-content:
-    space-between;
-
+  justify-content:space-between;
   align-items:center;
 }
 
@@ -93,7 +84,6 @@ nav{
   color:var(--navy);
 
   font-size:15px;
-
   font-weight:800;
 
   letter-spacing:3px;
@@ -101,12 +91,10 @@ nav{
 
 .menu{
   display:flex;
+  gap:22px;
 
-  gap:25px;
-
-  font-size:14px;
-
-  font-weight:600;
+  font-size:13px;
+  font-weight:700;
 
   color:#4b5665;
 }
@@ -122,13 +110,11 @@ nav{
 
 .container{
   max-width:1080px;
-
   margin:auto;
 }
 
 section{
-  padding:
-    75px 25px;
+  padding:75px 25px;
 }
 
 .section-label{
@@ -139,7 +125,6 @@ section{
   letter-spacing:3px;
 
   font-size:12px;
-
   font-weight:800;
 
   margin-bottom:10px;
@@ -188,13 +173,11 @@ h2{
 
   margin:auto;
 
-  padding:
-    75px 35px;
+  padding:75px 35px;
 }
 
 .hero-photo{
   width:100%;
-
   height:500px;
 
   object-fit:cover;
@@ -211,10 +194,9 @@ h2{
 
   text-transform:uppercase;
 
-  letter-spacing:4px;
+  letter-spacing:3px;
 
   font-size:13px;
-
   font-weight:800;
 
   margin-bottom:14px;
@@ -240,7 +222,19 @@ h2{
 
   line-height:1.55;
 
-  max-width:680px;
+  max-width:720px;
+}
+
+.hero-academic{
+  display:inline-block;
+
+  margin-top:10px;
+
+  color:#657181;
+
+  font-size:16px;
+
+  line-height:1.55;
 }
 
 .hero-buttons{
@@ -254,8 +248,7 @@ h2{
 }
 
 .btn{
-  padding:
-    12px 20px;
+  padding:12px 20px;
 
   border-radius:5px;
 
@@ -269,19 +262,21 @@ h2{
 
 .btn-primary{
   background:var(--navy);
-
   color:white;
 }
 
 .btn-secondary{
   background:white;
-
   color:var(--navy);
+}
+
+.btn:hover{
+  opacity:.9;
 }
 
 
 /* =====================================================
-   PROFILE
+   PROFESSIONAL PROFILE
 ===================================================== */
 
 .profile-section{
@@ -311,8 +306,7 @@ h2{
   border:
     1px solid var(--line);
 
-  background:
-    var(--light-blue);
+  background:var(--light-blue);
 
   padding:25px;
 
@@ -339,8 +333,7 @@ h2{
 ===================================================== */
 
 .impact-section{
-  background:
-    var(--light-blue);
+  background:var(--light-blue);
 }
 
 .impact-grid{
@@ -362,8 +355,7 @@ h2{
 
   border-radius:7px;
 
-  padding:
-    25px 15px;
+  padding:25px 15px;
 
   text-align:center;
 }
@@ -401,7 +393,6 @@ h2{
 
 .experience-list{
   display:grid;
-
   gap:22px;
 }
 
@@ -416,15 +407,13 @@ h2{
 
   border-radius:5px;
 
-  padding:
-    25px 27px;
+  padding:25px 27px;
 }
 
 .experience-top{
   display:flex;
 
-  justify-content:
-    space-between;
+  justify-content:space-between;
 
   align-items:flex-start;
 
@@ -439,6 +428,16 @@ h2{
   font-size:20px;
 
   font-weight:800;
+}
+
+.experience-subtitle{
+  color:var(--blue);
+
+  font-size:13px;
+
+  font-weight:700;
+
+  margin-top:2px;
 }
 
 .experience-org{
@@ -484,7 +483,6 @@ h2{
 
 .education-list{
   display:grid;
-
   gap:14px;
 }
 
@@ -496,13 +494,11 @@ h2{
 
   border-radius:6px;
 
-  padding:
-    20px 24px;
+  padding:20px 24px;
 
   display:flex;
 
-  justify-content:
-    space-between;
+  justify-content:space-between;
 
   gap:20px;
 }
@@ -533,13 +529,115 @@ h2{
   white-space:nowrap;
 }
 
+.education-research{
+  margin-top:10px;
+
+  padding:12px 15px;
+
+  background:var(--light-blue);
+
+  border-left:
+    3px solid var(--blue);
+
+  color:#4d5967;
+
+  font-size:13px;
+
+  line-height:1.55;
+
+  max-width:750px;
+}
+
+.education-research strong{
+  color:var(--navy);
+}
+
 
 /* =====================================================
-   COMPETENCIES
+   AWARDS & ACHIEVEMENTS
+===================================================== */
+
+.awards-section{
+  background:white;
+}
+
+.awards-list{
+  display:grid;
+  gap:18px;
+}
+
+.award-item{
+  display:grid;
+
+  grid-template-columns:
+    100px 1fr;
+
+  gap:25px;
+
+  background:white;
+
+  border:
+    1px solid var(--line);
+
+  border-left:
+    4px solid var(--blue);
+
+  border-radius:6px;
+
+  padding:25px;
+}
+
+.award-year{
+  color:var(--blue);
+
+  font-size:16px;
+
+  font-weight:800;
+
+  padding-top:3px;
+}
+
+.award-content h3{
+  color:var(--navy);
+
+  font-size:19px;
+
+  margin-bottom:3px;
+}
+
+.award-content h4{
+  color:var(--blue);
+
+  font-size:14px;
+
+  font-weight:700;
+
+  margin-bottom:12px;
+}
+
+.award-content ul{
+  padding-left:19px;
+
+  color:#4e5967;
+
+  font-size:14px;
+}
+
+.award-content li{
+  margin-bottom:7px;
+}
+
+.award-content strong{
+  color:var(--navy);
+}
+
+
+/* =====================================================
+   SKILLS
 ===================================================== */
 
 .competency-section{
-  background:white;
+  background:var(--very-light);
 }
 
 .competency-grid{
@@ -552,14 +650,12 @@ h2{
 }
 
 .competency{
-  background:
-    var(--light-blue);
+  background:var(--light-blue);
 
   border:
     1px solid #dce6f1;
 
-  padding:
-    17px 14px;
+  padding:17px 14px;
 
   border-radius:5px;
 
@@ -578,7 +674,7 @@ h2{
 ===================================================== */
 
 .language-section{
-  background:var(--very-light);
+  background:white;
 }
 
 .language-grid{
@@ -621,7 +717,7 @@ h2{
 ===================================================== */
 
 .gallery-section{
-  background:white;
+  background:var(--very-light);
 }
 
 .filters{
@@ -701,8 +797,7 @@ h2{
 }
 
 .photo:hover{
-  transform:
-    translateY(-3px);
+  transform:translateY(-3px);
 
   box-shadow:
     0 10px 25px
@@ -744,8 +839,7 @@ h2{
 
   z-index:3000;
 
-  background:
-    rgba(0,0,0,.92);
+  background:rgba(0,0,0,.92);
 
   align-items:center;
 
@@ -770,15 +864,13 @@ h2{
   position:absolute;
 
   width:45px;
-
   height:45px;
 
   border:0;
 
   border-radius:50%;
 
-  background:
-    rgba(255,255,255,.16);
+  background:rgba(255,255,255,.16);
 
   color:white;
 
@@ -789,19 +881,16 @@ h2{
 
 .close{
   top:20px;
-
   right:20px;
 }
 
 .prev{
   left:20px;
-
   top:50%;
 }
 
 .next{
   right:20px;
-
   top:50%;
 }
 
@@ -898,8 +987,7 @@ footer{
 
     gap:40px;
 
-    padding:
-      55px 25px;
+    padding:55px 25px;
   }
 
   .hero-photo{
@@ -959,7 +1047,11 @@ footer{
   }
 
   .hero-title{
-    font-size:17px;
+    font-size:18px;
+  }
+
+  .hero-academic{
+    font-size:14px;
   }
 
   .impact-grid,
@@ -983,6 +1075,16 @@ footer{
     flex-direction:column;
 
     gap:5px;
+  }
+
+  .award-item{
+    grid-template-columns:1fr;
+
+    gap:8px;
+  }
+
+  .award-year{
+    padding-top:0;
   }
 
   h2{
@@ -1023,6 +1125,8 @@ SUT RAINE DU
 
 <a href="#education">Education</a>
 
+<a href="#awards">Awards</a>
+
 <a href="#gallery">Gallery</a>
 
 <a href="#contact">Contact</a>
@@ -1053,7 +1157,7 @@ alt="Sut Raine Du"
 <div>
 
 <div class="hero-label">
-Professional Portfolio
+Community Development Advocate
 </div>
 
 <h1>
@@ -1062,9 +1166,25 @@ Raine Du
 </h1>
 
 <p class="hero-title">
-Program Management · Community Development
+
+Youth Leadership &amp; Education Practitioner
+
 <br>
-Business & Strategy
+
+Program Management | Business Strategy
+
+<br>
+
+<span class="hero-academic">
+
+Global MBA Candidate, University of the Thai Chamber of Commerce (UTCC)
+
+<br>
+
+Expected Graduation: December 2026
+
+</span>
+
 </p>
 
 <div class="hero-buttons">
@@ -1107,7 +1227,7 @@ Professional Profile
 </div>
 
 <h2>
-Program & Community Development
+Program &amp; Community Development
 </h2>
 
 <div class="profile-grid">
@@ -1123,8 +1243,9 @@ corporate project support.
 
 Currently pursuing a Global Master of Business
 Administration at the University of the Thai
-Chamber of Commerce, with interests in strategic
-management and transformational leadership.
+Chamber of Commerce, with a strong interest in
+strategic management and transformational
+leadership.
 
 Experienced in stakeholder coordination,
 project management, training facilitation,
@@ -1155,11 +1276,11 @@ Youth Empowerment
 </p>
 
 <p>
-Training & Facilitation
+Training &amp; Facilitation
 </p>
 
 <p>
-Business & Strategy
+Business &amp; Strategy
 </p>
 
 </div>
@@ -1264,7 +1385,7 @@ NSI Business Management students supported
 
 
 <!-- =====================================================
-     PROFESSIONAL EXPERIENCE
+     WORK EXPERIENCE
 ===================================================== -->
 
 <section
@@ -1286,9 +1407,7 @@ Work Experience
 <div class="experience-list">
 
 
-<!-- =====================================================
-     PwC
-===================================================== -->
+<!-- PwC -->
 
 <div class="experience-item">
 
@@ -1311,7 +1430,6 @@ Nov 2025 – Aug 2026
 </div>
 
 </div>
-
 
 <ul>
 
@@ -1343,9 +1461,7 @@ coordination and structured consulting delivery.
 
 
 
-<!-- =====================================================
-     KSAB
-===================================================== -->
+<!-- KSAB -->
 
 <div class="experience-item">
 
@@ -1369,7 +1485,6 @@ Apr 2025 – May 2026
 </div>
 
 </div>
-
 
 <ul>
 
@@ -1395,9 +1510,7 @@ members, participants, and community stakeholders.
 
 
 
-<!-- =====================================================
-     NSI
-===================================================== -->
+<!-- NSI -->
 
 <div class="experience-item">
 
@@ -1407,10 +1520,10 @@ members, participants, and community stakeholders.
 
 <div class="experience-position">
 Program Facilitator
-<br>
-<span style="font-size:14px;font-weight:600;">
-Training Facilitator & Petty Cashier
-</span>
+</div>
+
+<div class="experience-subtitle">
+Training Facilitator &amp; Petty Cashier
 </div>
 
 <div class="experience-org">
@@ -1425,7 +1538,6 @@ Ningshawng Social Institute (NSI)
 </div>
 
 </div>
-
 
 <ul>
 
@@ -1459,9 +1571,7 @@ and program teams.
 
 
 
-<!-- =====================================================
-     MYEO
-===================================================== -->
+<!-- MYEO -->
 
 <div class="experience-item">
 
@@ -1486,20 +1596,19 @@ Myanmar Youth Empowerment Opportunities (MYEO)
 
 </div>
 
-
 <ul>
 
 <li>
 Led youth empowerment and leadership-development
-initiatives that trained and engaged more than
-4,000 young people across 12 states and regions
-of Myanmar.
+initiatives that trained more than 4,000 young
+people across 12 states and regions of Myanmar.
 </li>
 
 <li>
 Contributed to regional workshop initiatives
-reaching more than 3,000 youth through collaboration
-with 30+ universities and organizations.
+reaching more than 3,000 youth through
+collaboration with 30+ universities and
+organizations.
 </li>
 
 <li>
@@ -1510,8 +1619,8 @@ Boot Camps in Kachin.
 
 <li>
 Delivered a three-month intensive program for
-approximately 200 NSI Business Management students
-under a MYEO × NSI institutional grant.
+approximately 200 NSI Business Management
+students under a MYEO × NSI institutional grant.
 </li>
 
 <li>
@@ -1556,6 +1665,8 @@ Education
 <div class="education-list">
 
 
+<!-- GMBA -->
+
 <div class="education-item">
 
 <div>
@@ -1569,14 +1680,28 @@ University of the Thai Chamber of Commerce (UTCC)
 · Bangkok, Thailand
 </div>
 
+<div class="education-research">
+
+<strong>MBA Research / Thesis:</strong>
+
+<br>
+
+“The Influence of Transformational Leadership on
+Employee Motivation at the Ningshawng Social
+Institute (NSI)”
+
+</div>
+
 </div>
 
 <div class="education-year">
-Class of 2026
+Expected Dec 2026
 </div>
 
 </div>
 
+
+<!-- BBA -->
 
 <div class="education-item">
 
@@ -1599,6 +1724,8 @@ Strategy First International College · Myanmar
 </div>
 
 
+<!-- BA -->
+
 <div class="education-item">
 
 <div>
@@ -1620,12 +1747,14 @@ University of Yangon (East) · Myanmar
 </div>
 
 
+<!-- ICM -->
+
 <div class="education-item">
 
 <div>
 
 <div class="education-degree">
-Diploma in Business Management & Administration
+Diploma in Business Management &amp; Administration
 </div>
 
 <div class="education-school">
@@ -1641,12 +1770,14 @@ The Institute of Commercial Management (ICM)
 </div>
 
 
+<!-- NSI -->
+
 <div class="education-item">
 
 <div>
 
 <div class="education-degree">
-Diploma in Business Management & English
+Diploma in Business Management &amp; English
 </div>
 
 <div class="education-school">
@@ -1657,6 +1788,155 @@ Ningshawng Social Institute
 
 <div class="education-year">
 2020
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     AWARDS & ACHIEVEMENTS
+===================================================== -->
+
+<section
+class="awards-section"
+id="awards"
+>
+
+<div class="container">
+
+<div class="section-label">
+Awards &amp; Achievements
+</div>
+
+<h2>
+Leadership &amp; Recognition
+</h2>
+
+
+<div class="awards-list">
+
+
+<!-- CFLI -->
+
+<div class="award-item">
+
+<div class="award-year">
+2020
+</div>
+
+<div class="award-content">
+
+<h3>
+Canada Fund for Local Initiatives (CFLI)
+</h3>
+
+<h4>
+United Community Leadership Program (UCLP)
+· MYEO Unity Summit 2020
+</h4>
+
+<ul>
+
+<li>
+<strong>Top 50 Youth Selection:</strong>
+Selected for the Canada Fund for Local Initiatives
+(CFLI)-sponsored United Community Leadership
+Program (UCLP) / MYEO Unity Summit 2020.
+</li>
+
+<li>
+<strong>Project Winner – 1st Place:</strong>
+Led the <em>“Physical Disability to Ability”</em>
+project addressing SDG targets.
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+
+<!-- SDGs -->
+
+<div class="award-item">
+
+<div class="award-year">
+2021
+</div>
+
+<div class="award-content">
+
+<h3>
+SDGs Boot Camp
+</h3>
+
+<h4>
+Main In-Charge · Nationwide Training Sessions
+</h4>
+
+<ul>
+
+<li>
+Served as Main In-Charge for nationwide
+SDG-focused training sessions.
+</li>
+
+<li>
+Supported youth engagement, training coordination,
+and SDG-focused capacity development.
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+
+<!-- NSI -->
+
+<div class="award-item">
+
+<div class="award-year">
+2019–2020
+</div>
+
+<div class="award-content">
+
+<h3>
+NSI Leadership Award
+</h3>
+
+<h4>
+Ningshawng Social Institute (NSI)
+</h4>
+
+<ul>
+
+<li>
+Received the <strong>Leadership Award</strong>
+while studying the Diploma in Business Management
+&amp; English (Dip.BME) at Ningshawng Social Institute.
+</li>
+
+<li>
+Recognized for leadership and active participation
+during the 2019–2020 academic period.
+</li>
+
+</ul>
+
 </div>
 
 </div>
@@ -1691,13 +1971,12 @@ Professional Skills
 
 <div class="competency-grid">
 
-
 <div class="competency">
-Program & Project Management
+Program &amp; Project Management
 </div>
 
 <div class="competency">
-Strategic Planning & Analysis
+Strategic Planning &amp; Analysis
 </div>
 
 <div class="competency">
@@ -1705,7 +1984,7 @@ Stakeholder Management
 </div>
 
 <div class="competency">
-Training & Facilitation
+Training &amp; Facilitation
 </div>
 
 <div class="competency">
@@ -1713,17 +1992,16 @@ Community Development
 </div>
 
 <div class="competency">
-Research & Reporting
+Research &amp; Reporting
 </div>
 
 <div class="competency">
-Event & Workshop Management
+Event &amp; Workshop Management
 </div>
 
 <div class="competency">
-Budgeting & Financial Records
+Budgeting &amp; Financial Records
 </div>
-
 
 </div>
 
@@ -1753,7 +2031,6 @@ Language Skills
 
 
 <div class="language-grid">
-
 
 <div class="language">
 
@@ -1806,7 +2083,6 @@ Basic
 
 </div>
 
-
 </div>
 
 </div>
@@ -1831,7 +2107,7 @@ Portfolio Gallery
 </div>
 
 <h2>
-Work & Moments
+Work &amp; Moments
 </h2>
 
 <p class="lead">
@@ -1911,7 +2187,8 @@ id="contact"
 
 <div class="container">
 
-<div class="section-label"
+<div
+class="section-label"
 style="color:#bcd0ec;"
 >
 Contact
@@ -1970,6 +2247,7 @@ href="tel:+959797063708"
 class="contact-link"
 href="https://www.linkedin.com/in/sut-raine-du-58a722182/"
 target="_blank"
+rel="noopener"
 >
 LinkedIn
 </a>
@@ -1979,6 +2257,7 @@ LinkedIn
 class="contact-link"
 href="https://github.com/sutrainedu"
 target="_blank"
+rel="noopener"
 >
 GitHub
 </a>
@@ -1988,6 +2267,7 @@ GitHub
 class="contact-link"
 href="https://www.facebook.com/share/1GCNnomD2g/?mibextid=wwXIfr"
 target="_blank"
+rel="noopener"
 >
 Facebook
 </a>
@@ -2018,11 +2298,10 @@ Facebook
 <script>
 
 /* =====================================================
-   GALLERY — 59 PHOTOS
+   GALLERY DATA
 ===================================================== */
 
 const groups = [
-
 
 {
 name:'Buga Sama Charity Concert',
@@ -2030,19 +2309,13 @@ name:'Buga Sama Charity Concert',
 photos:[
 
 'Buga Sama Charity Concert "KSAB x Kachin Artists USA" 01.JPEG',
-
 'Buga Sama Charity Concert "KSAB x Kachin Artists USA" 02.JPG',
-
 'Buga Sama Charity Concert "KSAB x Kachin Artists USA" 03.jpg',
-
 'Buga Sama Charity Concert "KSAB x Kachin Artists USA" 04.JPEG',
-
 'Buga Sama Charity Concert "KSAB x Kachin Artists USA" 05.JPEG'
 
 ]
-
 },
-
 
 {
 name:'Final Business Presentation',
@@ -2050,19 +2323,13 @@ name:'Final Business Presentation',
 photos:[
 
 'Final Business Presentation 01.JPG',
-
 'Final Business Presentation 02.JPG',
-
 'Final Business Presentation 03.JPG',
-
 'Final Business Presentation 04.JPG',
-
 'Final Business Presentation 05.JPG'
 
 ]
-
 },
-
 
 {
 name:'KSAB Conference 2025',
@@ -2070,15 +2337,11 @@ name:'KSAB Conference 2025',
 photos:[
 
 'KSAB Conference 2025 - 01.JPG',
-
 'KSAB Conference 2025 - 02.JPG',
-
 'KSAB Conference 2025 - 03.JPG'
 
 ]
-
 },
-
 
 {
 name:'KSAB Edu-Fair & Summit 2025',
@@ -2086,19 +2349,13 @@ name:'KSAB Edu-Fair & Summit 2025',
 photos:[
 
 'KSAB Edu-Fair & Summit 2025-01.JPEG',
-
 'KSAB Edu-Fair & Summit 2025-02.JPEG',
-
 'KSAB Edu-Fair & Summit 2025-03.JPEG',
-
 'KSAB Edu-Fair & Summit 2025-04.JPEG',
-
 'KSAB Edu-Fair & Summit 2025-05.JPEG'
 
 ]
-
 },
-
 
 {
 name:'MYEO in Ningshawng Social Institute',
@@ -2106,25 +2363,16 @@ name:'MYEO in Ningshawng Social Institute',
 photos:[
 
 'MYEO in Ningshawng Social Institute 01.png',
-
 'MYEO in Ningshawng Social Institute 02.png',
-
 'MYEO in Ningshawng Social Institute 03.png',
-
 'MYEO in Ningshawng Social Institute 04.JPG',
-
 'MYEO in Ningshawng Social Institute 05.JPG',
-
 'MYEO in Ningshawng Social Institute 06.png',
-
 'MYEO in Ningshawng Social Institute 07.JPG',
-
 'MYEO in Ningshawng Social Institute 08.JPG'
 
 ]
-
 },
-
 
 {
 name:'Professional Development Training',
@@ -2132,25 +2380,16 @@ name:'Professional Development Training',
 photos:[
 
 'Professional Development Training 01.JPG',
-
 'Professional Development Training 02.JPG',
-
 'Professional Development Training 03.JPG',
-
 'Professional Development Training 04.JPG',
-
 'Professional Development Training 05.JPG',
-
 'Professional Development Training 06.JPG',
-
 'Professional Development Training 07.JPG',
-
 'Professional Development Training 08.JPG'
 
 ]
-
 },
-
 
 {
 name:'PwC Thailand',
@@ -2158,19 +2397,13 @@ name:'PwC Thailand',
 photos:[
 
 'PwC Thailand 01.JPG',
-
 'PwC Thailand 02.PNG',
-
 'PwC Thailand 03.PNG',
-
 'PwC Thailand 04.PNG',
-
 'PwC Thailand 05.JPG'
 
 ]
-
 },
-
 
 {
 name:'Thailand Kachin Student Conference 2026',
@@ -2178,33 +2411,20 @@ name:'Thailand Kachin Student Conference 2026',
 photos:[
 
 'Thailand Kachin Student Conference 2026 - 01.JPEG',
-
 'Thailand Kachin Student Conference 2026 - 02.JPEG',
-
 'Thailand Kachin Student Conference 2026 - 03.JPEG',
-
 'Thailand Kachin Student Conference 2026 - 04.JPEG',
-
 'Thailand Kachin Student Conference 2026 - 05.JPEG',
-
 'Thailand Kachin Student Conference 2026 - 06.JPEG',
-
 'Thailand Kachin Student Conference 2026 - 07.jpg',
-
 'Thailand Kachin Student Conference 2026 - 08.JPEG',
-
 'Thailand Kachin Student Conference 2026 - 09.JPEG',
-
 'Thailand Kachin Student Conference 2026 - 10.JPEG',
-
 'Thailand Kachin Student Conference 2026 - 11.JPEG',
-
 'Thailand Kachin Student Conference 2026 - 12.JPEG'
 
 ]
-
 },
-
 
 {
 name:'The Journey Forward',
@@ -2212,30 +2432,22 @@ name:'The Journey Forward',
 photos:[
 
 'The Journey Forward - 01.JPEG',
-
 'The Journey Forward - 02.JPEG',
-
 'The Journey Forward - 03.JPG',
-
 'The Journey Forward - 04.jpg',
-
 'The Journey Forward - 05.jpg',
-
 'The Journey Forward - 06.JPG',
-
 'The Journey Forward - 07.JPG',
-
 'The Journey Forward - 08.JPG'
 
 ]
-
 }
 
 ];
 
 
 /* =====================================================
-   GALLERY FUNCTIONS
+   GALLERY
 ===================================================== */
 
 const filters =
@@ -2257,11 +2469,9 @@ function imagePath(file){
 }
 
 
-function showGallery(
-  selected = 'All'
-){
+function showGallery(selected='All'){
 
-  filters.innerHTML = '';
+  filters.innerHTML='';
 
 
   const allButton =
@@ -2281,9 +2491,7 @@ function showGallery(
   allButton.onclick =
     () => showGallery('All');
 
-  filters.appendChild(
-    allButton
-  );
+  filters.appendChild(allButton);
 
 
   groups.forEach(group => {
@@ -2303,18 +2511,14 @@ function showGallery(
       group.name;
 
     button.onclick =
-      () => showGallery(
-        group.name
-      );
+      () => showGallery(group.name);
 
-    filters.appendChild(
-      button
-    );
+    filters.appendChild(button);
 
   });
 
 
-  gallery.innerHTML = '';
+  gallery.innerHTML='';
 
 
   const selectedGroups =
@@ -2326,90 +2530,74 @@ function showGallery(
       );
 
 
-  selectedGroups.forEach(
-    group => {
+  selectedGroups.forEach(group => {
 
-      const section =
-        document.createElement(
-          'div'
-        );
+    const section =
+      document.createElement('div');
 
-      section.className =
-        'gallery-group';
+    section.className =
+      'gallery-group';
 
 
-      section.innerHTML = `
+    section.innerHTML = `
 
-        <h3>
+      <h3>
+        ${group.name}
+        ·
+        ${group.photos.length}
+        photos
+      </h3>
+
+      <div class="gallery"></div>
+
+    `;
+
+
+    const grid =
+      section.querySelector('.gallery');
+
+
+    group.photos.forEach((file,index) => {
+
+      const photo =
+        document.createElement('div');
+
+      photo.className='photo';
+
+
+      photo.innerHTML = `
+
+        <img
+          src="${imagePath(file)}"
+          alt="${group.name} photo ${index+1}"
+          loading="lazy"
+        >
+
+        <p>
           ${group.name}
           ·
-          ${group.photos.length}
-          photos
-        </h3>
-
-        <div class="gallery"></div>
+          ${String(index+1).padStart(2,'0')}
+        </p>
 
       `;
 
 
-      const grid =
-        section.querySelector(
-          '.gallery'
-        );
-
-
-      group.photos.forEach(
-        (file,index) => {
-
-          const photo =
-            document.createElement(
-              'div'
-            );
-
-          photo.className =
-            'photo';
-
-
-          photo.innerHTML = `
-
-            <img
-              src="${imagePath(file)}"
-              alt="${group.name} photo ${index+1}"
-              loading="lazy"
-            >
-
-            <p>
-              ${group.name}
-              ·
-              ${String(index+1)
-                .padStart(2,'0')}
-            </p>
-
-          `;
-
-
-          photo.onclick =
-            () =>
-              openLightbox(
-                group.photos,
-                index
-              );
-
-
-          grid.appendChild(
-            photo
+      photo.onclick =
+        () =>
+          openLightbox(
+            group.photos,
+            index
           );
 
-        }
-      );
+
+      grid.appendChild(photo);
+
+    });
 
 
-      gallery.appendChild(
-        section
-      );
+    gallery.appendChild(section);
 
-    }
-  );
+  });
 
 }
 
@@ -2418,32 +2606,19 @@ function showGallery(
    LIGHTBOX
 ===================================================== */
 
-function openLightbox(
-  photos,
-  index
-){
+function openLightbox(photos,index){
 
-  currentPhotos =
-    photos;
+  currentPhotos=photos;
 
-  currentIndex =
-    index;
-
+  currentIndex=index;
 
   updateLightbox();
 
-
   document
-    .getElementById(
-      'lightbox'
-    )
-    .classList.add(
-      'show'
-    );
+    .getElementById('lightbox')
+    .classList.add('show');
 
-
-  document.body.style.overflow =
-    'hidden';
+  document.body.style.overflow='hidden';
 
 }
 
@@ -2451,14 +2626,10 @@ function openLightbox(
 function updateLightbox(){
 
   document
-    .getElementById(
-      'lightboxImage'
-    )
+    .getElementById('lightboxImage')
     .src =
       imagePath(
-        currentPhotos[
-          currentIndex
-        ]
+        currentPhotos[currentIndex]
       );
 
 }
@@ -2467,16 +2638,10 @@ function updateLightbox(){
 function closeLightbox(){
 
   document
-    .getElementById(
-      'lightbox'
-    )
-    .classList.remove(
-      'show'
-    );
+    .getElementById('lightbox')
+    .classList.remove('show');
 
-
-  document.body.style.overflow =
-    '';
+  document.body.style.overflow='';
 
 }
 
@@ -2489,7 +2654,6 @@ function nextPhoto(){
     )
     %
     currentPhotos.length;
-
 
   updateLightbox();
 
@@ -2507,7 +2671,6 @@ function previousPhoto(){
     %
     currentPhotos.length;
 
-
   updateLightbox();
 
 }
@@ -2517,59 +2680,46 @@ function previousPhoto(){
    KEYBOARD
 ===================================================== */
 
-document.addEventListener(
-  'keydown',
-  function(e){
+document.addEventListener('keydown',function(e){
 
-    const box =
-      document.getElementById(
-        'lightbox'
-      );
+  const box =
+    document.getElementById('lightbox');
 
 
-    if(
-      !box.classList.contains(
-        'show'
-      )
-    ){
+  if(
+    !box.classList.contains('show')
+  ){
 
-      return;
-
-    }
-
-
-    if(
-      e.key === 'Escape'
-    ){
-
-      closeLightbox();
-
-    }
-
-
-    if(
-      e.key === 'ArrowRight'
-    ){
-
-      nextPhoto();
-
-    }
-
-
-    if(
-      e.key === 'ArrowLeft'
-    ){
-
-      previousPhoto();
-
-    }
+    return;
 
   }
-);
+
+
+  if(e.key === 'Escape'){
+
+    closeLightbox();
+
+  }
+
+
+  if(e.key === 'ArrowRight'){
+
+    nextPhoto();
+
+  }
+
+
+  if(e.key === 'ArrowLeft'){
+
+    previousPhoto();
+
+  }
+
+});
 
 
 /* =====================================================
-   START
+   INITIALIZE
 ===================================================== */
 
 showGallery();
