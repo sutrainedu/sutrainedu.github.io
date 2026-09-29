@@ -4,28 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sut Raine Du | Personal Portfolio</title>
+<title>Sut Raine Du | Professional Portfolio</title>
 
 <style>
 
 /* =====================================================
-   ROOT
+   VARIABLES
 ===================================================== */
 
 :root{
-  --green:#214d3b;
-  --green2:#2f7052;
-  --light:#f5f7f5;
+  --navy:#17356d;
+  --blue:#214f96;
+  --light-blue:#eef5fc;
+  --very-light:#f7f9fc;
   --white:#ffffff;
-  --text:#1d2421;
-  --muted:#68716d;
-  --line:#dfe5e1;
-  --soft:#eaf1ed;
+  --text:#202936;
+  --muted:#647080;
+  --line:#dce3ec;
 }
 
 
 /* =====================================================
-   GLOBAL
+   RESET
 ===================================================== */
 
 *{
@@ -39,19 +39,21 @@ html{
 }
 
 body{
-  font-family:Arial,Helvetica,sans-serif;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
   color:var(--text);
-  background:var(--light);
-  line-height:1.65;
+
+  background:var(--very-light);
+
+  line-height:1.6;
 }
 
 a{
   text-decoration:none;
   color:inherit;
-}
-
-img{
-  max-width:100%;
 }
 
 
@@ -63,33 +65,103 @@ nav{
   position:sticky;
   top:0;
   z-index:1000;
-  background:rgba(255,255,255,.96);
-  border-bottom:1px solid var(--line);
+
+  background:
+    rgba(255,255,255,.97);
+
+  border-bottom:
+    1px solid var(--line);
 }
 
 .nav{
-  max-width:1150px;
+  max-width:1180px;
+
   margin:auto;
-  padding:18px 25px;
+
+  padding:
+    17px 25px;
 
   display:flex;
-  justify-content:space-between;
+
+  justify-content:
+    space-between;
+
   align-items:center;
 }
 
 .logo{
+  color:var(--navy);
+
+  font-size:15px;
+
   font-weight:800;
+
   letter-spacing:3px;
 }
 
 .menu{
   display:flex;
-  gap:22px;
+
+  gap:25px;
+
   font-size:14px;
+
+  font-weight:600;
+
+  color:#4b5665;
 }
 
 .menu a:hover{
-  color:var(--green2);
+  color:var(--blue);
+}
+
+
+/* =====================================================
+   COMMON
+===================================================== */
+
+.container{
+  max-width:1080px;
+
+  margin:auto;
+}
+
+section{
+  padding:
+    75px 25px;
+}
+
+.section-label{
+  color:var(--blue);
+
+  text-transform:uppercase;
+
+  letter-spacing:3px;
+
+  font-size:12px;
+
+  font-weight:800;
+
+  margin-bottom:10px;
+}
+
+h2{
+  color:var(--navy);
+
+  font-size:
+    clamp(32px,5vw,45px);
+
+  line-height:1.15;
+
+  margin-bottom:25px;
+}
+
+.lead{
+  color:var(--muted);
+
+  font-size:17px;
+
+  max-width:850px;
 }
 
 
@@ -98,33 +170,44 @@ nav{
 ===================================================== */
 
 .hero{
-  max-width:1150px;
-  margin:auto;
+  background:white;
 
-  min-height:88vh;
-  padding:80px 25px;
+  min-height:
+    calc(100vh - 65px);
 
   display:grid;
-  grid-template-columns:400px 1fr;
 
-  gap:70px;
+  grid-template-columns:
+    360px 1fr;
+
+  gap:65px;
+
   align-items:center;
+
+  max-width:1180px;
+
+  margin:auto;
+
+  padding:
+    75px 35px;
 }
 
-.hero img{
+.hero-photo{
   width:100%;
-  height:530px;
+
+  height:500px;
 
   object-fit:cover;
 
-  border-radius:8px;
+  border-radius:6px;
 
   box-shadow:
-    0 20px 50px rgba(0,0,0,.12);
+    0 15px 40px
+    rgba(25,55,100,.14);
 }
 
-.label{
-  color:var(--green2);
+.hero-label{
+  color:var(--blue);
 
   text-transform:uppercase;
 
@@ -132,119 +215,122 @@ nav{
 
   font-size:13px;
 
-  font-weight:bold;
+  font-weight:800;
 
-  margin-bottom:15px;
+  margin-bottom:14px;
 }
 
-h1{
-  font-size:clamp(55px,8vw,95px);
+.hero h1{
+  color:var(--navy);
 
-  line-height:.95;
+  font-size:
+    clamp(55px,8vw,90px);
+
+  line-height:.9;
 
   letter-spacing:-4px;
 
-  margin-bottom:25px;
+  margin-bottom:28px;
 }
 
-.hero p{
-  font-size:20px;
+.hero-title{
+  color:#4c5867;
 
-  color:var(--muted);
+  font-size:21px;
 
-  max-width:650px;
+  line-height:1.55;
+
+  max-width:680px;
 }
 
-.buttons{
-  margin-top:30px;
-
+.hero-buttons{
   display:flex;
 
   gap:12px;
 
   flex-wrap:wrap;
+
+  margin-top:30px;
 }
 
 .btn{
-  padding:12px 20px;
-
-  border:1px solid var(--green);
+  padding:
+    12px 20px;
 
   border-radius:5px;
 
-  font-weight:bold;
+  border:
+    1px solid var(--navy);
+
+  font-weight:700;
+
+  font-size:14px;
 }
 
-.btn.primary{
-  background:var(--green);
+.btn-primary{
+  background:var(--navy);
 
   color:white;
 }
 
-.btn:hover{
-  opacity:.9;
-}
-
-
-/* =====================================================
-   SECTIONS
-===================================================== */
-
-section{
-  padding:85px 25px;
-}
-
-.container{
-  max-width:1050px;
-
-  margin:auto;
-}
-
-h2{
-  font-size:43px;
-
-  margin-bottom:25px;
-}
-
-.lead{
-  font-size:19px;
-
-  color:#505a55;
-}
-
-
-/* =====================================================
-   ABOUT
-===================================================== */
-
-.about{
-  display:grid;
-
-  grid-template-columns:1.5fr 1fr;
-
-  gap:50px;
-}
-
-.card{
+.btn-secondary{
   background:white;
 
-  border:1px solid var(--line);
+  color:var(--navy);
+}
 
-  border-radius:8px;
+
+/* =====================================================
+   PROFILE
+===================================================== */
+
+.profile-section{
+  background:white;
+}
+
+.profile-grid{
+  display:grid;
+
+  grid-template-columns:
+    1.5fr 1fr;
+
+  gap:45px;
+
+  align-items:start;
+}
+
+.profile-text{
+  color:#4d5967;
+
+  font-size:17px;
+
+  line-height:1.75;
+}
+
+.focus-card{
+  border:
+    1px solid var(--line);
+
+  background:
+    var(--light-blue);
 
   padding:25px;
+
+  border-radius:7px;
 }
 
-.card h3{
-  margin-bottom:8px;
+.focus-card h3{
+  color:var(--navy);
+
+  margin-bottom:15px;
 }
 
-.meta{
-  color:var(--green2);
+.focus-card p{
+  margin-bottom:7px;
 
-  font-weight:bold;
+  color:#465363;
 
-  font-size:14px;
+  font-weight:600;
 }
 
 
@@ -253,7 +339,8 @@ h2{
 ===================================================== */
 
 .impact-section{
-  background:white;
+  background:
+    var(--light-blue);
 }
 
 .impact-grid{
@@ -262,52 +349,45 @@ h2{
   grid-template-columns:
     repeat(4,1fr);
 
-  gap:20px;
+  gap:18px;
 
-  margin-top:35px;
+  margin-top:30px;
 }
 
 .impact-card{
-  background:var(--soft);
+  background:white;
 
-  border:1px solid var(--line);
+  border:
+    1px solid #d8e3f0;
 
-  border-radius:8px;
+  border-radius:7px;
 
-  padding:30px 18px;
+  padding:
+    25px 15px;
 
   text-align:center;
-
-  transition:.2s;
 }
 
-.impact-card:hover{
-  transform:translateY(-3px);
-
-  box-shadow:
-    0 10px 25px rgba(0,0,0,.08);
-}
-
-.impact-card strong{
+.impact-number{
   display:block;
 
-  color:var(--green);
+  color:var(--navy);
 
-  font-size:38px;
+  font-size:36px;
+
+  font-weight:800;
 
   line-height:1;
 
-  margin-bottom:14px;
+  margin-bottom:12px;
 }
 
-.impact-card span{
-  display:block;
+.impact-text{
+  color:#596574;
 
-  color:#505a55;
+  font-size:13px;
 
-  font-size:14px;
-
-  line-height:1.5;
+  line-height:1.45;
 }
 
 
@@ -315,39 +395,81 @@ h2{
    EXPERIENCE
 ===================================================== */
 
-.timeline{
+.experience-section{
+  background:white;
+}
+
+.experience-list{
   display:grid;
 
-  gap:20px;
+  gap:22px;
 }
 
-.item{
+.experience-item{
   background:white;
 
-  border:1px solid var(--line);
+  border:
+    1px solid var(--line);
 
-  border-radius:8px;
+  border-left:
+    4px solid var(--blue);
 
-  padding:25px;
+  border-radius:5px;
+
+  padding:
+    25px 27px;
 }
 
-.item-head{
+.experience-top{
   display:flex;
 
-  justify-content:space-between;
+  justify-content:
+    space-between;
 
-  gap:20px;
+  align-items:flex-start;
 
-  margin-bottom:12px;
+  gap:25px;
+
+  margin-bottom:13px;
 }
 
-.item ul{
-  padding-left:20px;
+.experience-position{
+  color:var(--navy);
 
-  color:#515b56;
+  font-size:20px;
+
+  font-weight:800;
 }
 
-.item li{
+.experience-org{
+  color:var(--blue);
+
+  font-size:14px;
+
+  font-weight:700;
+
+  margin-top:3px;
+}
+
+.experience-date{
+  color:#657181;
+
+  font-size:13px;
+
+  font-weight:700;
+
+  white-space:nowrap;
+}
+
+.experience-item ul{
+  padding-left:19px;
+
+  color:#4e5967;
+
+  font-size:14px;
+}
+
+.experience-item li{
   margin-bottom:6px;
 }
 
@@ -356,37 +478,141 @@ h2{
    EDUCATION
 ===================================================== */
 
-.grid{
+.education-section{
+  background:var(--very-light);
+}
+
+.education-list{
   display:grid;
 
-  grid-template-columns:
-    repeat(2,1fr);
+  gap:14px;
+}
+
+.education-item{
+  background:white;
+
+  border:
+    1px solid var(--line);
+
+  border-radius:6px;
+
+  padding:
+    20px 24px;
+
+  display:flex;
+
+  justify-content:
+    space-between;
 
   gap:20px;
 }
 
+.education-degree{
+  color:var(--navy);
+
+  font-size:17px;
+
+  font-weight:800;
+}
+
+.education-school{
+  color:#5d6877;
+
+  font-size:14px;
+
+  margin-top:4px;
+}
+
+.education-year{
+  color:var(--blue);
+
+  font-size:14px;
+
+  font-weight:800;
+
+  white-space:nowrap;
+}
+
 
 /* =====================================================
-   SKILLS
+   COMPETENCIES
 ===================================================== */
 
-.skills{
+.competency-section{
+  background:white;
+}
+
+.competency-grid{
   display:grid;
 
   grid-template-columns:
-    repeat(3,1fr);
+    repeat(4,1fr);
+
+  gap:12px;
+}
+
+.competency{
+  background:
+    var(--light-blue);
+
+  border:
+    1px solid #dce6f1;
+
+  padding:
+    17px 14px;
+
+  border-radius:5px;
+
+  color:#35465c;
+
+  font-size:14px;
+
+  font-weight:700;
+
+  text-align:center;
+}
+
+
+/* =====================================================
+   LANGUAGES
+===================================================== */
+
+.language-section{
+  background:var(--very-light);
+}
+
+.language-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
 
   gap:15px;
 }
 
-.skill{
-  background:var(--soft);
+.language{
+  background:white;
 
-  padding:17px;
+  border:
+    1px solid var(--line);
+
+  padding:18px;
 
   border-radius:6px;
+}
 
-  font-weight:bold;
+.language-name{
+  color:var(--navy);
+
+  font-weight:800;
+
+  margin-bottom:4px;
+}
+
+.language-level{
+  color:#667180;
+
+  font-size:13px;
 }
 
 
@@ -405,40 +631,49 @@ h2{
 
   flex-wrap:wrap;
 
-  margin:25px 0 40px;
+  margin:
+    25px 0 35px;
 }
 
 .filter{
-  border:1px solid var(--line);
+  border:
+    1px solid var(--line);
 
   background:white;
 
-  padding:9px 14px;
+  color:#455263;
 
-  border-radius:30px;
+  padding:
+    9px 14px;
+
+  border-radius:25px;
 
   cursor:pointer;
 
-  font-weight:bold;
+  font-size:12px;
 
-  font-size:13px;
+  font-weight:700;
 }
 
-.filter.active,
-.filter:hover{
-  background:var(--green);
+.filter:hover,
+.filter.active{
+  background:var(--navy);
 
   color:white;
+
+  border-color:var(--navy);
 }
 
 .gallery-group{
-  margin-bottom:55px;
+  margin-bottom:50px;
 }
 
 .gallery-group h3{
-  margin-bottom:18px;
+  color:var(--navy);
 
-  font-size:22px;
+  font-size:21px;
+
+  margin-bottom:17px;
 }
 
 .gallery{
@@ -447,17 +682,18 @@ h2{
   grid-template-columns:
     repeat(3,1fr);
 
-  gap:18px;
+  gap:17px;
 }
 
 .photo{
-  border:1px solid var(--line);
+  background:white;
 
-  border-radius:8px;
+  border:
+    1px solid var(--line);
+
+  border-radius:6px;
 
   overflow:hidden;
-
-  background:white;
 
   cursor:pointer;
 
@@ -465,16 +701,18 @@ h2{
 }
 
 .photo:hover{
-  transform:translateY(-3px);
+  transform:
+    translateY(-3px);
 
   box-shadow:
-    0 12px 30px rgba(0,0,0,.12);
+    0 10px 25px
+    rgba(0,0,0,.1);
 }
 
 .photo img{
   width:100%;
 
-  height:230px;
+  height:220px;
 
   object-fit:cover;
 
@@ -482,11 +720,14 @@ h2{
 }
 
 .photo p{
-  padding:12px;
+  padding:
+    11px 12px;
 
-  font-size:13px;
+  color:#485565;
 
-  font-weight:bold;
+  font-size:12px;
+
+  font-weight:700;
 }
 
 
@@ -503,7 +744,8 @@ h2{
 
   z-index:3000;
 
-  background:rgba(0,0,0,.9);
+  background:
+    rgba(0,0,0,.92);
 
   align-items:center;
 
@@ -524,9 +766,7 @@ h2{
   object-fit:contain;
 }
 
-.close,
-.prev,
-.next{
+.lightbox button{
   position:absolute;
 
   width:45px;
@@ -537,7 +777,8 @@ h2{
 
   border-radius:50%;
 
-  background:rgba(255,255,255,.15);
+  background:
+    rgba(255,255,255,.16);
 
   color:white;
 
@@ -569,14 +810,14 @@ h2{
    CONTACT
 ===================================================== */
 
-.contact{
-  background:var(--green);
+.contact-section{
+  background:var(--navy);
 
   color:white;
 }
 
-.contact p{
-  color:#d8e6df;
+.contact-section h2{
+  color:white;
 }
 
 .contact-grid{
@@ -588,26 +829,40 @@ h2{
   gap:50px;
 }
 
-.links{
-  display:grid;
+.contact-intro{
+  color:#dce5f1;
 
-  gap:12px;
+  font-size:16px;
+
+  max-width:500px;
 }
 
-.links a{
-  background:
-    rgba(255,255,255,.1);
+.contact-links{
+  display:grid;
 
-  padding:14px;
+  gap:10px;
+}
+
+.contact-link{
+  background:
+    rgba(255,255,255,.09);
+
+  border:
+    1px solid
+    rgba(255,255,255,.12);
+
+  padding:13px 16px;
 
   border-radius:5px;
 
-  transition:.2s;
+  color:white;
+
+  font-size:14px;
 }
 
-.links a:hover{
+.contact-link:hover{
   background:
-    rgba(255,255,255,.18);
+    rgba(255,255,255,.16);
 }
 
 
@@ -616,15 +871,15 @@ h2{
 ===================================================== */
 
 footer{
-  background:#17382b;
+  background:#102852;
 
-  color:white;
+  color:#dce5f1;
 
   text-align:center;
 
-  padding:25px;
+  padding:22px;
 
-  font-size:13px;
+  font-size:12px;
 }
 
 
@@ -632,7 +887,7 @@ footer{
    TABLET
 ===================================================== */
 
-@media(max-width:800px){
+@media(max-width:850px){
 
   .menu{
     display:none;
@@ -642,34 +897,38 @@ footer{
     grid-template-columns:1fr;
 
     gap:40px;
+
+    padding:
+      55px 25px;
   }
 
-  .hero img{
-    max-width:450px;
+  .hero-photo{
+    max-width:430px;
 
     margin:auto;
   }
 
-  .about,
+  .profile-grid,
   .contact-grid{
     grid-template-columns:1fr;
   }
 
-  .grid{
-    grid-template-columns:1fr;
-  }
-
-  .skills{
-    grid-template-columns:
-      1fr 1fr;
-  }
-
-  .gallery{
+  .impact-grid{
     grid-template-columns:
       repeat(2,1fr);
   }
 
-  .impact-grid{
+  .competency-grid{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .language-grid{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .gallery{
     grid-template-columns:
       repeat(2,1fr);
   }
@@ -683,30 +942,51 @@ footer{
 
 @media(max-width:550px){
 
+  section{
+    padding:
+      55px 18px;
+  }
+
+  .hero{
+    padding:
+      45px 18px;
+  }
+
+  .hero h1{
+    font-size:60px;
+
+    letter-spacing:-3px;
+  }
+
+  .hero-title{
+    font-size:17px;
+  }
+
+  .impact-grid,
+  .competency-grid,
+  .language-grid,
   .gallery{
     grid-template-columns:1fr;
   }
 
-  .skills{
-    grid-template-columns:1fr;
-  }
-
-  .impact-grid{
-    grid-template-columns:1fr;
-  }
-
-  h1{
-    font-size:60px;
-  }
-
-  h2{
-    font-size:35px;
-  }
-
-  .item-head{
+  .experience-top{
     flex-direction:column;
 
     gap:5px;
+  }
+
+  .experience-date{
+    white-space:normal;
+  }
+
+  .education-item{
+    flex-direction:column;
+
+    gap:5px;
+  }
+
+  h2{
+    font-size:34px;
   }
 
 }
@@ -726,35 +1006,26 @@ footer{
 
 <div class="nav">
 
-<a class="logo" href="#home">
+<a
+class="logo"
+href="#home"
+>
 SUT RAINE DU
 </a>
 
 <div class="menu">
 
-<a href="#about">
-About
-</a>
+<a href="#about">About</a>
 
-<a href="#impact">
-Impact
-</a>
+<a href="#impact">Impact</a>
 
-<a href="#experience">
-Experience
-</a>
+<a href="#experience">Experience</a>
 
-<a href="#education">
-Education
-</a>
+<a href="#education">Education</a>
 
-<a href="#gallery">
-Gallery
-</a>
+<a href="#gallery">Gallery</a>
 
-<a href="#contact">
-Contact
-</a>
+<a href="#contact">Contact</a>
 
 </div>
 
@@ -768,17 +1039,21 @@ Contact
      HERO
 ===================================================== -->
 
-<header class="hero" id="home">
+<header
+class="hero"
+id="home"
+>
 
 <img
+class="hero-photo"
 src="Profile.PNG"
 alt="Sut Raine Du"
 >
 
 <div>
 
-<div class="label">
-Personal Portfolio
+<div class="hero-label">
+Professional Portfolio
 </div>
 
 <h1>
@@ -786,26 +1061,26 @@ Sut<br>
 Raine Du
 </h1>
 
-<p>
-Community Development Advocate ·
-Global MBA Candidate ·
-Youth Leadership & Education Practitioner
+<p class="hero-title">
+Program Management · Community Development
+<br>
+Business & Strategy
 </p>
 
-<div class="buttons">
+<div class="hero-buttons">
 
 <a
-class="btn primary"
-href="#about"
+class="btn btn-primary"
+href="#experience"
 >
-Explore My Work
+View Experience
 </a>
 
 <a
-class="btn"
+class="btn btn-secondary"
 href="#contact"
 >
-Let's Connect
+Contact Me
 </a>
 
 </div>
@@ -817,65 +1092,74 @@ Let's Connect
 
 
 <!-- =====================================================
-     ABOUT
+     PROFESSIONAL PROFILE
 ===================================================== -->
 
-<section id="about">
+<section
+class="profile-section"
+id="about"
+>
 
 <div class="container">
 
-<div class="label">
-About Me
+<div class="section-label">
+Professional Profile
 </div>
 
 <h2>
-Purpose-driven work, grounded in community.
+Program & Community Development
 </h2>
 
-<div class="about">
+<div class="profile-grid">
 
-<p class="lead">
+<div>
 
-A purpose-driven leader with experience in
-youth empowerment, community education,
-program coordination, leadership development,
-and community-based initiatives across Myanmar
-and Thailand.
+<p class="profile-text">
+
+Program and community development professional
+with experience in youth empowerment, education,
+training, organizational coordination, and
+corporate project support.
 
 Currently pursuing a Global Master of Business
 Administration at the University of the Thai
-Chamber of Commerce, with professional experience
-spanning community development, education,
-organizational coordination, and corporate project
-support.
+Chamber of Commerce, with interests in strategic
+management and transformational leadership.
+
+Experienced in stakeholder coordination,
+project management, training facilitation,
+research and reporting, budgeting, and
+community engagement.
 
 </p>
 
+</div>
 
-<div class="card">
+
+<div class="focus-card">
 
 <h3>
 Focus Areas
 </h3>
 
 <p>
+Program Management
+</p>
+
+<p>
+Community Development
+</p>
+
+<p>
 Youth Empowerment
 </p>
 
 <p>
-Community Education
+Training & Facilitation
 </p>
 
 <p>
-Leadership Development
-</p>
-
-<p>
-Program Coordination
-</p>
-
-<p>
-Research & Community Development
+Business & Strategy
 </p>
 
 </div>
@@ -899,7 +1183,7 @@ id="impact"
 
 <div class="container">
 
-<div class="label">
+<div class="section-label">
 Key Impact
 </div>
 
@@ -909,9 +1193,8 @@ Impact at a Glance
 
 <p class="lead">
 
-Selected measurable contributions from
-youth development, education, and
-community engagement initiatives.
+Selected impact from youth development,
+education, training, and community initiatives.
 
 </p>
 
@@ -921,11 +1204,11 @@ community engagement initiatives.
 
 <div class="impact-card">
 
-<strong>
+<span class="impact-number">
 4,000+
-</strong>
+</span>
 
-<span>
+<span class="impact-text">
 Youth trained across 12 states/regions
 of Myanmar
 </span>
@@ -935,11 +1218,11 @@ of Myanmar
 
 <div class="impact-card">
 
-<strong>
+<span class="impact-number">
 3,000+
-</strong>
+</span>
 
-<span>
+<span class="impact-text">
 Youth reached through regional workshops
 </span>
 
@@ -948,11 +1231,11 @@ Youth reached through regional workshops
 
 <div class="impact-card">
 
-<strong>
+<span class="impact-number">
 30+
-</strong>
+</span>
 
-<span>
+<span class="impact-text">
 Universities and organizations involved
 </span>
 
@@ -961,11 +1244,11 @@ Universities and organizations involved
 
 <div class="impact-card">
 
-<strong>
+<span class="impact-number">
 ~200
-</strong>
+</span>
 
-<span>
+<span class="impact-text">
 NSI Business Management students supported
 </span>
 
@@ -981,46 +1264,51 @@ NSI Business Management students supported
 
 
 <!-- =====================================================
-     EXPERIENCE
+     PROFESSIONAL EXPERIENCE
 ===================================================== -->
 
-<section id="experience">
+<section
+class="experience-section"
+id="experience"
+>
 
 <div class="container">
 
-<div class="label">
+<div class="section-label">
 Professional Experience
 </div>
 
 <h2>
-Experience
+Work Experience
 </h2>
 
 
-<div class="timeline">
+<div class="experience-list">
 
 
-<!-- PwC -->
+<!-- =====================================================
+     PwC
+===================================================== -->
 
-<div class="item">
+<div class="experience-item">
 
-<div class="item-head">
+<div class="experience-top">
 
 <div>
 
-<h3>
+<div class="experience-position">
 Project Staff
-</h3>
+</div>
 
-<div class="meta">
+<div class="experience-org">
 PwC Thailand · Bangkok, Thailand
 </div>
 
 </div>
 
-<strong>
+<div class="experience-date">
 Nov 2025 – Aug 2026
-</strong>
+</div>
 
 </div>
 
@@ -1040,9 +1328,13 @@ and deadlines across workstreams.
 </li>
 
 <li>
-Gained practical experience in structured
-consulting delivery and stakeholder
-coordination.
+Supported documentation, meeting materials,
+workshop coordination, and follow-up activities.
+</li>
+
+<li>
+Gained practical experience in stakeholder
+coordination and structured consulting delivery.
 </li>
 
 </ul>
@@ -1051,28 +1343,30 @@ coordination.
 
 
 
-<!-- KSAB -->
+<!-- =====================================================
+     KSAB
+===================================================== -->
 
-<div class="item">
+<div class="experience-item">
 
-<div class="item-head">
+<div class="experience-top">
 
 <div>
 
-<h3>
+<div class="experience-position">
 Secretary
-</h3>
+</div>
 
-<div class="meta">
+<div class="experience-org">
 Kachin Student Association Bangkok (KSAB)
 · Bangkok, Thailand
 </div>
 
 </div>
 
-<strong>
+<div class="experience-date">
 Apr 2025 – May 2026
-</strong>
+</div>
 
 </div>
 
@@ -1086,9 +1380,13 @@ students and community members in Bangkok.
 </li>
 
 <li>
-Supported event planning, committee
-coordination, documentation, and community
-engagement.
+Supported event planning, committee coordination,
+documentation, and community engagement.
+</li>
+
+<li>
+Coordinated communications among committee
+members, participants, and community stakeholders.
 </li>
 
 </ul>
@@ -1097,28 +1395,34 @@ engagement.
 
 
 
-<!-- NSI -->
+<!-- =====================================================
+     NSI
+===================================================== -->
 
-<div class="item">
+<div class="experience-item">
 
-<div class="item-head">
+<div class="experience-top">
 
 <div>
 
-<h3>
+<div class="experience-position">
 Program Facilitator
-</h3>
+<br>
+<span style="font-size:14px;font-weight:600;">
+Training Facilitator & Petty Cashier
+</span>
+</div>
 
-<div class="meta">
+<div class="experience-org">
 Ningshawng Social Institute (NSI)
 · Myitkyina, Kachin State, Myanmar
 </div>
 
 </div>
 
-<strong>
+<div class="experience-date">
 2021 – 2024
-</strong>
+</div>
 
 </div>
 
@@ -1128,27 +1432,25 @@ Ningshawng Social Institute (NSI)
 <li>
 Supported planning and delivery of training
 programs, including facilitation, logistics,
-participant coordination, and program
-documentation.
+participant coordination, and documentation.
 </li>
 
 <li>
-Prepared official correspondence, action
-plans, activity budgets, attendance records,
-and regular activity/financial reports.
+Prepared official correspondence, action plans,
+activity budgets, attendance records, and
+regular activity and financial reports.
 </li>
 
 <li>
 Managed petty cash for training activities,
 including fund requests, disbursement,
-expenditure tracking, receipts, vouchers,
-and supporting documents.
+expenditure tracking, receipts, and vouchers.
 </li>
 
 <li>
 Coordinated training materials, agendas,
-timetables, and program files while working
-with management and program teams.
+timetables, and program files with management
+and program teams.
 </li>
 
 </ul>
@@ -1157,28 +1459,30 @@ with management and program teams.
 
 
 
-<!-- MYEO -->
+<!-- =====================================================
+     MYEO
+===================================================== -->
 
-<div class="item">
+<div class="experience-item">
 
-<div class="item-head">
+<div class="experience-top">
 
 <div>
 
-<h3>
+<div class="experience-position">
 Campus Chapter Director
-</h3>
+</div>
 
-<div class="meta">
+<div class="experience-org">
 Myanmar Youth Empowerment Opportunities (MYEO)
 · Myanmar
 </div>
 
 </div>
 
-<strong>
+<div class="experience-date">
 2020 – 2023
-</strong>
+</div>
 
 </div>
 
@@ -1194,21 +1498,19 @@ of Myanmar.
 
 <li>
 Contributed to regional workshop initiatives
-reaching more than 3,000 youth through
-collaboration with 30+ universities and
-organizations.
+reaching more than 3,000 youth through collaboration
+with 30+ universities and organizations.
 </li>
 
 <li>
-Served as Main In-Charge for USAID-funded
-ELI World Youth Skills Boot Camps and War Zone
-Scale Boot Camps in Kachin, supporting youth
-capacity-building programs.
+Served as Main In-Charge for USAID-funded ELI
+World Youth Skills Boot Camps and War Zone Scale
+Boot Camps in Kachin.
 </li>
 
 <li>
 Delivered a three-month intensive program for
-nearly 200 NSI Business Management students
+approximately 200 NSI Business Management students
 under a MYEO × NSI institutional grant.
 </li>
 
@@ -1235,11 +1537,14 @@ Director from a community college.
      EDUCATION
 ===================================================== -->
 
-<section id="education">
+<section
+class="education-section"
+id="education"
+>
 
 <div class="container">
 
-<div class="label">
+<div class="section-label">
 Academic Background
 </div>
 
@@ -1248,96 +1553,110 @@ Education
 </h2>
 
 
-<div class="grid">
+<div class="education-list">
 
 
-<!-- GMBA -->
+<div class="education-item">
 
-<div class="card">
+<div>
 
-<h3>
+<div class="education-degree">
 Global Master of Business Administration (GMBA)
-</h3>
-
-<div class="meta">
-University of the Thai Chamber of Commerce
-· Class of 2026
 </div>
 
-<p>
-Bangkok, Thailand
-</p>
+<div class="education-school">
+University of the Thai Chamber of Commerce (UTCC)
+· Bangkok, Thailand
+</div>
 
 </div>
 
+<div class="education-year">
+Class of 2026
+</div>
 
-<!-- BBA -->
+</div>
 
-<div class="card">
 
-<h3>
+<div class="education-item">
+
+<div>
+
+<div class="education-degree">
 Bachelor of Business Administration (BBA)
-</h3>
-
-<div class="meta">
-Strategy First International College
-· Class of 2024
 </div>
 
-<p>
-Myanmar
-</p>
+<div class="education-school">
+Strategy First International College · Myanmar
+</div>
 
 </div>
 
+<div class="education-year">
+2024
+</div>
 
-<!-- BA -->
+</div>
 
-<div class="card">
 
-<h3>
+<div class="education-item">
+
+<div>
+
+<div class="education-degree">
 Bachelor of Arts (BA), Philosophy
-</h3>
-
-<div class="meta">
-University of Yangon (East)
-· Class of 2023
 </div>
 
-<p>
-Myanmar
-</p>
+<div class="education-school">
+University of Yangon (East) · Myanmar
+</div>
 
 </div>
 
+<div class="education-year">
+2023
+</div>
 
-<!-- ICM -->
+</div>
 
-<div class="card">
 
-<h3>
+<div class="education-item">
+
+<div>
+
+<div class="education-degree">
 Diploma in Business Management & Administration
-</h3>
+</div>
 
-<div class="meta">
+<div class="education-school">
 The Institute of Commercial Management (ICM)
-· Class of 2023
+</div>
+
+</div>
+
+<div class="education-year">
+2023
 </div>
 
 </div>
 
 
-<!-- NSI -->
+<div class="education-item">
 
-<div class="card">
+<div>
 
-<h3>
+<div class="education-degree">
 Diploma in Business Management & English
-</h3>
+</div>
 
-<div class="meta">
+<div class="education-school">
 Ningshawng Social Institute
-· Class of 2020
+</div>
+
+</div>
+
+<div class="education-year">
+2020
 </div>
 
 </div>
@@ -1355,90 +1674,138 @@ Ningshawng Social Institute
      CORE COMPETENCIES
 ===================================================== -->
 
-<section>
+<section
+class="competency-section"
+>
 
 <div class="container">
 
-<div class="label">
-Capabilities
+<div class="section-label">
+Core Competencies
 </div>
 
 <h2>
-Core Competencies
+Professional Skills
 </h2>
 
 
-<div class="skills">
+<div class="competency-grid">
 
 
-<div class="skill">
+<div class="competency">
 Program & Project Management
 </div>
 
-<div class="skill">
+<div class="competency">
 Strategic Planning & Analysis
 </div>
 
-<div class="skill">
+<div class="competency">
 Stakeholder Management
 </div>
 
-<div class="skill">
+<div class="competency">
 Training & Facilitation
 </div>
 
-<div class="skill">
+<div class="competency">
 Community Development
 </div>
 
-<div class="skill">
+<div class="competency">
 Research & Reporting
 </div>
 
-<div class="skill">
+<div class="competency">
 Event & Workshop Management
 </div>
 
-<div class="skill">
+<div class="competency">
 Budgeting & Financial Records
 </div>
 
-<div class="skill">
-Public Speaking
-</div>
 
-<div class="skill">
-Documentation
-</div>
-
-<div class="skill">
-Social Media
-</div>
-
-<div class="skill">
-Mentorship
 </div>
 
 </div>
 
+</section>
 
-<div
-class="card"
-style="margin-top:20px"
+
+
+<!-- =====================================================
+     LANGUAGES
+===================================================== -->
+
+<section
+class="language-section"
 >
 
-<strong>
+<div class="container">
+
+<div class="section-label">
 Languages
-</strong>
+</div>
 
-<p>
+<h2>
+Language Skills
+</h2>
 
-Kachin (Jinghpaw) — Fluent ·
-Myanmar — Fluent ·
-English — Fluent ·
-Thai — Basic
 
-</p>
+<div class="language-grid">
+
+
+<div class="language">
+
+<div class="language-name">
+Kachin (Jinghpaw)
+</div>
+
+<div class="language-level">
+Fluent
+</div>
+
+</div>
+
+
+<div class="language">
+
+<div class="language-name">
+Myanmar
+</div>
+
+<div class="language-level">
+Fluent
+</div>
+
+</div>
+
+
+<div class="language">
+
+<div class="language-name">
+English
+</div>
+
+<div class="language-level">
+Fluent
+</div>
+
+</div>
+
+
+<div class="language">
+
+<div class="language-name">
+Thai
+</div>
+
+<div class="language-level">
+Basic
+</div>
+
+</div>
+
 
 </div>
 
@@ -1459,18 +1826,18 @@ id="gallery"
 
 <div class="container">
 
-<div class="label">
-Gallery
+<div class="section-label">
+Portfolio Gallery
 </div>
 
 <h2>
-Moments & Milestones
+Work & Moments
 </h2>
 
 <p class="lead">
 
-Community work, professional experiences,
-events, training and academic moments.
+Community initiatives, professional experiences,
+events, training, and academic moments.
 
 </p>
 
@@ -1509,7 +1876,6 @@ onclick="closeLightbox()"
 ×
 </button>
 
-
 <button
 class="prev"
 onclick="previousPhoto()"
@@ -1517,13 +1883,11 @@ onclick="previousPhoto()"
 ‹
 </button>
 
-
 <img
 id="lightboxImage"
 src=""
 alt=""
 >
-
 
 <button
 class="next"
@@ -1541,15 +1905,21 @@ onclick="nextPhoto()"
 ===================================================== -->
 
 <section
-class="contact"
+class="contact-section"
 id="contact"
 >
 
 <div class="container">
 
-<div class="label">
+<div class="section-label"
+style="color:#bcd0ec;"
+>
 Contact
 </div>
+
+<h2>
+Let's Connect
+</h2>
 
 
 <div class="contact-grid">
@@ -1557,14 +1927,11 @@ Contact
 
 <div>
 
-<h2>
-Let's connect.
-</h2>
+<p class="contact-intro">
 
-<p>
-
-For collaboration, community initiatives,
-research, education and professional
+Available for collaboration, community
+initiatives, research, education,
+program management, and professional
 opportunities.
 
 </p>
@@ -1572,10 +1939,11 @@ opportunities.
 </div>
 
 
-<div class="links">
+<div class="contact-links">
 
 
 <a
+class="contact-link"
 href="mailto:sutrainedu98@gmail.com"
 >
 ✉ sutrainedu98@gmail.com
@@ -1583,6 +1951,7 @@ href="mailto:sutrainedu98@gmail.com"
 
 
 <a
+class="contact-link"
 href="tel:+66816299530"
 >
 ☎ Thailand: +66 81 629 9530
@@ -1590,6 +1959,7 @@ href="tel:+66816299530"
 
 
 <a
+class="contact-link"
 href="tel:+959797063708"
 >
 ☎ Myanmar: +95 9 7970 63708
@@ -1597,6 +1967,7 @@ href="tel:+959797063708"
 
 
 <a
+class="contact-link"
 href="https://www.linkedin.com/in/sut-raine-du-58a722182/"
 target="_blank"
 >
@@ -1605,6 +1976,7 @@ LinkedIn
 
 
 <a
+class="contact-link"
 href="https://github.com/sutrainedu"
 target="_blank"
 >
@@ -1613,6 +1985,7 @@ GitHub
 
 
 <a
+class="contact-link"
 href="https://www.facebook.com/share/1GCNnomD2g/?mibextid=wwXIfr"
 target="_blank"
 >
@@ -1636,7 +2009,7 @@ Facebook
 
 <footer>
 
-© 2026 Sut Raine Du. All rights reserved.
+© 2026 Sut Raine Du · Professional Portfolio
 
 </footer>
 
@@ -1645,14 +2018,11 @@ Facebook
 <script>
 
 /* =====================================================
-   GALLERY DATA
-   TOTAL: 59 PHOTOS
+   GALLERY — 59 PHOTOS
 ===================================================== */
 
 const groups = [
 
-
-/* Buga Sama */
 
 {
 name:'Buga Sama Charity Concert',
@@ -1674,9 +2044,6 @@ photos:[
 },
 
 
-
-/* Final Business Presentation */
-
 {
 name:'Final Business Presentation',
 
@@ -1697,9 +2064,6 @@ photos:[
 },
 
 
-
-/* KSAB Conference */
-
 {
 name:'KSAB Conference 2025',
 
@@ -1715,9 +2079,6 @@ photos:[
 
 },
 
-
-
-/* KSAB Edu-Fair */
 
 {
 name:'KSAB Edu-Fair & Summit 2025',
@@ -1738,9 +2099,6 @@ photos:[
 
 },
 
-
-
-/* MYEO */
 
 {
 name:'MYEO in Ningshawng Social Institute',
@@ -1768,9 +2126,6 @@ photos:[
 },
 
 
-
-/* Professional Development */
-
 {
 name:'Professional Development Training',
 
@@ -1797,9 +2152,6 @@ photos:[
 },
 
 
-
-/* PwC */
-
 {
 name:'PwC Thailand',
 
@@ -1819,9 +2171,6 @@ photos:[
 
 },
 
-
-
-/* Thailand Kachin Student Conference */
 
 {
 name:'Thailand Kachin Student Conference 2026',
@@ -1857,9 +2206,6 @@ photos:[
 },
 
 
-
-/* The Journey Forward */
-
 {
 name:'The Journey Forward',
 
@@ -1888,9 +2234,8 @@ photos:[
 ];
 
 
-
 /* =====================================================
-   GALLERY VARIABLES
+   GALLERY FUNCTIONS
 ===================================================== */
 
 const filters =
@@ -1904,193 +2249,169 @@ let currentPhotos = [];
 let currentIndex = 0;
 
 
-
-/* =====================================================
-   IMAGE PATH
-===================================================== */
-
 function imagePath(file){
 
-return 'images/' +
-encodeURIComponent(file);
+  return 'images/' +
+    encodeURIComponent(file);
 
 }
 
 
+function showGallery(
+  selected = 'All'
+){
 
-/* =====================================================
-   SHOW GALLERY
-===================================================== */
+  filters.innerHTML = '';
 
-function showGallery(selected='All'){
 
+  const allButton =
+    document.createElement('button');
 
-filters.innerHTML='';
+  allButton.className =
+    'filter ' +
+    (
+      selected === 'All'
+      ? 'active'
+      : ''
+    );
 
+  allButton.textContent =
+    'All · 59';
 
+  allButton.onclick =
+    () => showGallery('All');
 
-/* ALL BUTTON */
+  filters.appendChild(
+    allButton
+  );
 
-const allButton =
-document.createElement('button');
 
-allButton.className =
-'filter ' +
-(selected === 'All'
-? 'active'
-: '');
+  groups.forEach(group => {
 
-allButton.textContent =
-'All · 59';
+    const button =
+      document.createElement('button');
 
-allButton.onclick =
-()=>showGallery('All');
+    button.className =
+      'filter ' +
+      (
+        selected === group.name
+        ? 'active'
+        : ''
+      );
 
-filters.appendChild(allButton);
+    button.textContent =
+      group.name;
 
+    button.onclick =
+      () => showGallery(
+        group.name
+      );
 
+    filters.appendChild(
+      button
+    );
 
-/* GROUP BUTTONS */
+  });
 
-groups.forEach(group=>{
 
+  gallery.innerHTML = '';
 
-const button =
-document.createElement('button');
 
+  const selectedGroups =
+    selected === 'All'
+    ? groups
+    : groups.filter(
+        group =>
+          group.name === selected
+      );
 
-button.className =
-'filter ' +
-(selected === group.name
-? 'active'
-: '');
 
+  selectedGroups.forEach(
+    group => {
 
-button.textContent =
-group.name;
+      const section =
+        document.createElement(
+          'div'
+        );
 
+      section.className =
+        'gallery-group';
 
-button.onclick =
-()=>showGallery(
-group.name
-);
 
+      section.innerHTML = `
 
-filters.appendChild(button);
+        <h3>
+          ${group.name}
+          ·
+          ${group.photos.length}
+          photos
+        </h3>
 
-});
+        <div class="gallery"></div>
 
+      `;
 
 
-/* CLEAR */
+      const grid =
+        section.querySelector(
+          '.gallery'
+        );
 
-gallery.innerHTML='';
 
+      group.photos.forEach(
+        (file,index) => {
 
+          const photo =
+            document.createElement(
+              'div'
+            );
 
-/* SELECT GROUPS */
+          photo.className =
+            'photo';
 
-const selectedGroups =
-selected === 'All'
-? groups
-: groups.filter(
-g => g.name === selected
-);
 
+          photo.innerHTML = `
 
+            <img
+              src="${imagePath(file)}"
+              alt="${group.name} photo ${index+1}"
+              loading="lazy"
+            >
 
-/* BUILD GALLERY */
+            <p>
+              ${group.name}
+              ·
+              ${String(index+1)
+                .padStart(2,'0')}
+            </p>
 
-selectedGroups.forEach(group=>{
+          `;
 
 
-const section =
-document.createElement('div');
+          photo.onclick =
+            () =>
+              openLightbox(
+                group.photos,
+                index
+              );
 
 
-section.className =
-'gallery-group';
+          grid.appendChild(
+            photo
+          );
 
+        }
+      );
 
-section.innerHTML = `
 
-<h3>
-${group.name}
-·
-${group.photos.length}
-photos
-</h3>
+      gallery.appendChild(
+        section
+      );
 
-<div class="gallery">
-</div>
-
-`;
-
-
-const grid =
-section.querySelector(
-'.gallery'
-);
-
-
-
-/* PHOTOS */
-
-group.photos.forEach(
-(file,index)=>{
-
-
-const photo =
-document.createElement(
-'div'
-);
-
-
-photo.className =
-'photo';
-
-
-photo.innerHTML = `
-
-<img
-src="${imagePath(file)}"
-alt="${group.name} photo ${index+1}"
-loading="lazy"
->
-
-<p>
-${group.name}
-·
-${String(index+1).padStart(2,'0')}
-</p>
-
-`;
-
-
-photo.onclick =
-()=>openLightbox(
-group.photos,
-index
-);
-
-
-grid.appendChild(
-photo
-);
-
-
-});
-
-
-gallery.appendChild(
-section
-);
-
-
-});
+    }
+  );
 
 }
-
 
 
 /* =====================================================
@@ -2098,157 +2419,153 @@ section
 ===================================================== */
 
 function openLightbox(
-photos,
-index
+  photos,
+  index
 ){
 
-currentPhotos =
-photos;
+  currentPhotos =
+    photos;
 
-currentIndex =
-index;
-
-
-updateLightbox();
+  currentIndex =
+    index;
 
 
-document
-.getElementById('lightbox')
-.classList.add('show');
+  updateLightbox();
 
 
-document.body.style.overflow =
-'hidden';
+  document
+    .getElementById(
+      'lightbox'
+    )
+    .classList.add(
+      'show'
+    );
+
+
+  document.body.style.overflow =
+    'hidden';
 
 }
 
-
-
-/* UPDATE */
 
 function updateLightbox(){
 
-document
-.getElementById(
-'lightboxImage'
-)
-.src =
-imagePath(
-currentPhotos[
-currentIndex
-]
-);
+  document
+    .getElementById(
+      'lightboxImage'
+    )
+    .src =
+      imagePath(
+        currentPhotos[
+          currentIndex
+        ]
+      );
 
 }
 
-
-
-/* CLOSE */
 
 function closeLightbox(){
 
-document
-.getElementById(
-'lightbox'
-)
-.classList.remove(
-'show'
-);
+  document
+    .getElementById(
+      'lightbox'
+    )
+    .classList.remove(
+      'show'
+    );
 
-document.body.style.overflow =
-'';
+
+  document.body.style.overflow =
+    '';
 
 }
 
-
-
-/* NEXT */
 
 function nextPhoto(){
 
-currentIndex =
-(
-currentIndex + 1
-)
-%
-currentPhotos.length;
+  currentIndex =
+    (
+      currentIndex + 1
+    )
+    %
+    currentPhotos.length;
 
-updateLightbox();
+
+  updateLightbox();
 
 }
 
-
-
-/* PREVIOUS */
 
 function previousPhoto(){
 
-currentIndex =
-(
-currentIndex - 1 +
-currentPhotos.length
-)
-%
-currentPhotos.length;
+  currentIndex =
+    (
+      currentIndex -
+      1 +
+      currentPhotos.length
+    )
+    %
+    currentPhotos.length;
 
-updateLightbox();
+
+  updateLightbox();
 
 }
-
 
 
 /* =====================================================
-   KEYBOARD CONTROLS
+   KEYBOARD
 ===================================================== */
 
 document.addEventListener(
-'keydown',
-function(e){
+  'keydown',
+  function(e){
+
+    const box =
+      document.getElementById(
+        'lightbox'
+      );
 
 
-const box =
-document.getElementById(
-'lightbox'
+    if(
+      !box.classList.contains(
+        'show'
+      )
+    ){
+
+      return;
+
+    }
+
+
+    if(
+      e.key === 'Escape'
+    ){
+
+      closeLightbox();
+
+    }
+
+
+    if(
+      e.key === 'ArrowRight'
+    ){
+
+      nextPhoto();
+
+    }
+
+
+    if(
+      e.key === 'ArrowLeft'
+    ){
+
+      previousPhoto();
+
+    }
+
+  }
 );
-
-
-if(
-!box.classList.contains(
-'show'
-)
-){
-return;
-}
-
-
-if(
-e.key === 'Escape'
-){
-
-closeLightbox();
-
-}
-
-
-if(
-e.key === 'ArrowRight'
-){
-
-nextPhoto();
-
-}
-
-
-if(
-e.key === 'ArrowLeft'
-){
-
-previousPhoto();
-
-}
-
-});
-
 
 
 /* =====================================================
